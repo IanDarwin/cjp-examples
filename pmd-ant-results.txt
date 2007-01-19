@@ -1,0 +1,4 @@
+
+badcode/CopiedCodeExample.java:3	Avoid importing anything from the package 'java.lang'
+intro/Action.java:30	An empty statement (semicolon) not part of a loop
+intro/Action.java:30	Avoid empty if statements

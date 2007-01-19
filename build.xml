@@ -1,0 +1,25 @@
+<project name="Checking Java Programs: examples">
+
+<!-- Do not ask me if you can use this file in your project. Just use it! -->
+
+<path id="full.classpath">
+	<fileset dir="tools">
+		<include name="*.jar"/>
+	</fileset>
+	<dirset dir=".">
+		<include name="${build}"/>
+</dirset>
+</path>
+
+<target name="pmd">
+	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="full.classpath"/>
+	<pmd shortFilenames="true">
+		<ruleset>basic,imports</ruleset>
+		<formatter type="text" toFile="pmd-ant-results.txt"/>
+		<fileset dir="src">
+			<include name="**/*.java"/>
+		</fileset>
+	</pmd>
+</target>
+
+</project>
