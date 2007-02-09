@@ -2,17 +2,25 @@
 
 <!-- Do not ask me if you can use this file in your project. Just use it! -->
 
+<property name="build" value="build"/>
+<property name="src"   value="src"/>
+
+<!-- <property name="pmd.home" value="/home/ian/Applications/pmd" /> -->
+<property name="findbugs.home" value="/home/ian/Applications/findbugs" />
+<property name="jpf.home" value="/usr/local/share/javapathfinder" />
+
 <path id="full.classpath">
 	<fileset dir="tools">
 		<include name="*.jar"/>
 	</fileset>
 	<dirset dir=".">
 		<include name="${build}"/>
-</dirset>
+	</dirset>
 </path>
 
 <target name="pmd">
-	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask" classpathref="full.classpath"/>
+	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask"
+		classpathref="full.classpath"/>
 	<pmd shortFilenames="true">
 		<ruleset>basic,imports</ruleset>
 		<formatter type="text" toFile="pmd-ant-results.txt"/>
@@ -20,6 +28,31 @@
 			<include name="**/*.java"/>
 		</fileset>
 	</pmd>
+</target>
+
+<target name="findbugs">
+	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
+		classpath="${findbugs.home}/lib/findbugs-ant.jar"/>
+	<findbugs home="${findbugs.home}"
+              output="text"
+              outputFile="findbugs-ant-results.txt" >
+		<class location="${build}" />
+		<sourcePath path="${src}" />
+		<!-- Classes needed by our code but that we don't want tested -->
+		<auxClasspath path="tools/pmd-3.9.jar" />
+	</findbugs>
+</target>
+
+<target name="jpf">
+	<path id="jpf-path">
+		<pathelement location="${user.home}/javasrc/build"/>
+		<fileset dir="${jpf.home}">
+		        <include name="**/*.jar"/>
+		</fileset>
+	</path>
+	<java classname="gov.nasa.jpf.JPF" classpathref="jpf-path">
+		<arg value="starting.HelloWorld"/>
+	</java>
 </target>
 
 </project>
