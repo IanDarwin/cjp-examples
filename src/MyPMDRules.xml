@@ -8,9 +8,9 @@
 	<description>This is a set of demonstration rules to accompany "Checking Java Programs".
 	</description>
 
-	<rule name="DontThrowSQLException"
-		class="extensions.pmd.DontThrowSQLExceptionRule"
-		message="SQL Exceptions should be wrapped in DataBaseException">
+	<rule name="DontThrowSQLExceptionXML"
+		class="net.sourceforge.pmd.rules.XPathRule"
+		message="XML Rule: SQL Exceptions should be wrapped in DataBaseException">
 		<description>
 			SQL Exceptions are checked Exceptions and force needless
 			try/catch or throws overhead on client code; these should be
@@ -23,7 +23,36 @@ public abstract class Foo {
 	public String getCustomerName() throws SQLException {...}
 	public String getCustomerStreetAddr() throws SQLException {...}
 }
-        ]]>
+			]]>
+		</example>
+		<priority>3</priority>
+		<properties>
+		<property name="xpath">
+		<value>
+			<![CDATA[
+//MethodDeclaration/NameList/Name[@Image='SQLException']
+			]]>
+		</value>
+		</property>
+		</properites>
+	</rule>
+
+	<rule name="DontThrowSQLExceptionJava"
+		class="extensions.pmd.DontThrowSQLExceptionRule"
+		message="Java Rule: SQL Exceptions should be wrapped in DataBaseException">
+		<description>
+			SQL Exceptions are checked Exceptions and force needless
+			try/catch or throws overhead on client code; these should be
+			wrapped in DataBaseException or a similar unchecked
+			Exception (RuntimeException subclass).
+		</description>
+		<example>
+			<![CDATA[
+public abstract class Foo {
+	public String getCustomerName() throws SQLException {...}
+	public String getCustomerStreetAddr() throws SQLException {...}
+}
+		]]>
 		</example>
 		<priority>3</priority>
 		<properties/>
