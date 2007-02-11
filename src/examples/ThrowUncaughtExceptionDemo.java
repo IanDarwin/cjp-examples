@@ -1,16 +1,16 @@
 package badcode;
 
-public class ThrowUncaughtException {
+public class ThrowUncaughtExceptionDemo {
 
 	int n = 0;
 
 	public static void main(String[] args) {
 		System.out.println("ThrowUncaughtException.main() starting");
-		new ThrowUncaughtException(args).process();
+		new ThrowUncaughtExceptionDemo(args).process();
 		System.out.println("ThrowUncaughtException.main() done.");
 	}
 
-	public ThrowUncaughtException(String[] args) {
+	public ThrowUncaughtExceptionDemo(String[] args) {
 		System.out.println("ThrowUncaughtException.ThrowUncaughtException()");
 		if (args.length == 1) {
 			n = Integer.parseInt(args[0]);
