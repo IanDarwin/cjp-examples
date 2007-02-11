@@ -2,8 +2,13 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-	<classpathentry kind="lib" path="tools/pmd-3.9.jar"/>
-	<classpathentry kind="lib" path="tools/asm-3.0.jar"/>
-	<classpathentry kind="lib" path="tools/jaxen-1.1-beta-10.jar"/>
+	<classpathentry kind="var" path="FINDBUGS_ANNOTATIONS"/>
+	<classpathentry kind="var" path="JAVAPATHFINDERHOME/lib/env_jpf.jar"/>
+	<classpathentry kind="var" path="JAVAPATHFINDERHOME/lib/env_jvm.jar"/>
+	<classpathentry kind="var" path="JAVAPATHFINDERHOME/lib/open-jpf.jar"/>
+	<classpathentry kind="var" path="PMD_HOME/lib/asm-3.0.jar"/>
+	<classpathentry kind="var" path="PMD_HOME/lib/backport-util-concurrent.jar"/>
+	<classpathentry kind="var" path="PMD_HOME/lib/jaxen-1.1-beta-10.jar"/>
+	<classpathentry kind="var" path="PMD_HOME/lib/pmd-3.9.jar"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>

@@ -5,12 +5,12 @@
 <property name="build" value="build"/>
 <property name="src"   value="src"/>
 
-<!-- <property name="pmd.home" value="/home/ian/Applications/pmd" /> -->
+<property name="pmd.home" value="/home/ian/Applications/pmd" />
 <property name="findbugs.home" value="/home/ian/Applications/findbugs" />
 <property name="jpf.home" value="/usr/local/share/javapathfinder" />
 
 <path id="full.classpath">
-	<fileset dir="tools">
+	<fileset dir="${pmd.home}/lib">
 		<include name="*.jar"/>
 	</fileset>
 	<dirset dir=".">
@@ -23,6 +23,7 @@
 		classpathref="full.classpath"/>
 	<pmd shortFilenames="true">
 		<ruleset>basic,imports</ruleset>
+		<ruleset>MyPMDRules.xml</ruleset>
 		<formatter type="text" toFile="pmd-ant-results.txt"/>
 		<fileset dir="src">
 			<include name="**/*.java"/>
@@ -44,13 +45,13 @@
 </target>
 
 <target name="jpf">
-	<path id="jpf-path">
-		<pathelement location="${user.home}/javasrc/build"/>
-		<fileset dir="${jpf.home}">
-		        <include name="**/*.jar"/>
-		</fileset>
-	</path>
-	<java classname="gov.nasa.jpf.JPF" classpathref="jpf-path">
+	<java classname="gov.nasa.jpf.JPF">
+		<classpath>
+			<pathelement location="${user.home}/javasrc/build"/>
+			<fileset dir="${jpf.home}">
+			        <include name="**/*.jar"/>
+			</fileset>
+		</classpath>
 		<arg value="starting.HelloWorld"/>
 	</java>
 </target>
