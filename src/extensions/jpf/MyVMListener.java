@@ -1,7 +1,7 @@
 package extensions.jpf;
 
-import gov.nasa.jpf.VM;
-import gov.nasa.jpf.VMListener;
+import gov.nasa.jpf.jvm.JVM;
+import gov.nasa.jpf.jvm.VMListener;
 
 public class MyVMListener implements VMListener {
 
@@ -13,42 +13,100 @@ public class MyVMListener implements VMListener {
 	private int exceptionsThrown;
 	private int activeThreads;
 
-	public void classLoaded(VM arg0) {
-		++classesLoaded;
-	}
-
-	public void exceptionThrown(VM arg0) {
+	public void exceptionThrown(JVM arg0) {
 		++exceptionsThrown;
 	}
 
-	public void gcBegin(VM arg0) {
+	public void gcBegin(JVM arg0) {
 		++gcRuns;
 	}
 
-	public void gcEnd(VM arg0) {
+	public void gcEnd(JVM arg0) {
 		// nothing to do
 	}
 
-	public void instructionExecuted(VM arg0) {
+	public void instructionExecuted(JVM arg0) {
 		++insns;
 	}
 
-	public void objectCreated(VM arg0) {
+	public void objectCreated(JVM arg0) {
 		++objectsCreated;
 	}
+	public void objectLocked(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
 
-	public void objectReleased(VM arg0) {
+	public void objectNotify(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void objectNotifyAll(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void objectUnlocked(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void objectWait(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void objectReleased(JVM arg0) {
 		// nothing to do
 	}
 
-	public void threadStarted(VM arg0) {
+	public void threadStarted(JVM arg0) {
 		++threadsStarted; ++activeThreads;
 	}
 
-	public void threadTerminated(VM arg0) {
+	public void threadTerminated(JVM arg0) {
 		if (--activeThreads == 0) {
 			dumpState();
 		}
+	}
+
+
+	public void choiceGeneratorAdvanced(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void choiceGeneratorProcessed(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void choiceGeneratorSet(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void classLoaded(JVM arg0) {
+		++classesLoaded;
+	}
+
+
+	public void executeInstruction(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+
+	public void threadBlocked(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void threadInterrupted(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void threadNotified(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void threadScheduled(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void threadWaiting(JVM arg0) {
+		// TODO Auto-generated method stub
 	}
 
 	private void dumpState() {
@@ -58,6 +116,5 @@ public class MyVMListener implements VMListener {
 				insns,
 				gcRuns);
 	}
-
 
 }
