@@ -61,11 +61,30 @@ public class MyVMListener implements VMListener {
 	}
 
 	public void threadTerminated(JVM arg0) {
-		if (--activeThreads == 0) {
+		if (--activeThreads <= 0) {
 			dumpState();
 		}
 	}
 
+	public void threadBlocked(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void threadInterrupted(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void threadNotified(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void threadScheduled(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
+
+	public void threadWaiting(JVM arg0) {
+		// TODO Auto-generated method stub
+	}
 
 	public void choiceGeneratorAdvanced(JVM arg0) {
 		// TODO Auto-generated method stub
@@ -85,27 +104,6 @@ public class MyVMListener implements VMListener {
 
 
 	public void executeInstruction(JVM arg0) {
-		// TODO Auto-generated method stub
-	}
-
-
-	public void threadBlocked(JVM arg0) {
-		// TODO Auto-generated method stub
-	}
-
-	public void threadInterrupted(JVM arg0) {
-		// TODO Auto-generated method stub
-	}
-
-	public void threadNotified(JVM arg0) {
-		// TODO Auto-generated method stub
-	}
-
-	public void threadScheduled(JVM arg0) {
-		// TODO Auto-generated method stub
-	}
-
-	public void threadWaiting(JVM arg0) {
 		// TODO Auto-generated method stub
 	}
 
