@@ -7,7 +7,7 @@
 
 <property name="pmd.home" value="/home/ian/Applications/pmd" />
 <property name="findbugs.home" value="/home/ian/Applications/findbugs" />
-<property name="jpf.home" value="/usr/local/share/javapathfinder" />
+<property name="jpf.home" value="/home/ian/src/javapathfinder" />
 
 <path id="full.classpath">
 	<fileset dir="${pmd.home}/lib">
@@ -45,7 +45,7 @@
 </target>
 
 <target name="jpf">
-	<java classname="gov.nasa.jpf.JPF">
+	<java classname="gov.nasa.jpf.JPF" fork="true">
 		<classpath>
 			<pathelement location="${user.home}/javasrc/build"/>
 			<fileset dir="${jpf.home}">
