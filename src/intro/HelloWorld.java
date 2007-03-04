@@ -1,4 +1,4 @@
-package starting;
+package intro;
 
 /**
  * Your basic, minimal, Hello World type program in Java.
