@@ -26,10 +26,21 @@
 		<ruleset>basic,imports</ruleset>
 		<ruleset>MyPMDRules.xml</ruleset>
 		<formatter type="text" toFile="pmd-ant-results.txt"/>
-		<fileset dir="src">
+		<fileset dir="${src}">
 			<include name="**/*.java"/>
 		</fileset>
 	</pmd>
+</target>
+
+<target name="cpd">
+	<taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask"
+		classpathref="full.classpath"/>
+	<cpd minimumTokenCount="30" outputFile="cpd-report.txt">
+		<fileset dir="${src}">
+			<include name="**/*.java"/>
+			<exclude name="generated/**.java"/>
+		</fileset>
+	</cpd>
 </target>
 
 <target name="findbugs">
