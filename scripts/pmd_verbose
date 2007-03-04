@@ -4,4 +4,4 @@
 
 PMD_HOME=/home/ian/Applications/pmd-3.9
 
-java -Xmx512m -cp :${PMD_HOME}/lib/asm-3.0.jar:${PMD_HOME}/lib/backport-util-concurrent.jar:${PMD_HOME}/lib/jaxen-1.1-beta-10.jar:${PMD_HOME}/lib/pmd-3.9.jar net.sourceforge.pmd.PMD /home/ian/workspace/cjp/src/badcode text basic,imports,unusedcode
+java -Xmx512m -cp :${PMD_HOME}/lib/asm-3.0.jar:${PMD_HOME}/lib/backport-util-concurrent.jar:${PMD_HOME}/lib/jaxen-1.1-beta-10.jar:${PMD_HOME}/lib/pmd-3.9.jar net.sourceforge.pmd.PMD /home/ian/workspace/cjp/src/examples text basic,imports,unusedcode
