@@ -1,4 +1,4 @@
-package badcode;
+package examples;
 
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;

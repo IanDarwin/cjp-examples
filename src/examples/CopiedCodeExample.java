@@ -1,4 +1,4 @@
-package badcode;
+package examples;
 
 import java.lang.StringBuilder;
 

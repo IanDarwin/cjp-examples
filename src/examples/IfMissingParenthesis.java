@@ -1,4 +1,4 @@
-package badcode;
+package examples;
 
 public class IfMissingParenthesis {
 

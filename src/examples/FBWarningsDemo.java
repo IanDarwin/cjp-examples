@@ -1,4 +1,4 @@
-package badcode;
+package examples;
 
 import edu.umd.cs.findbugs.annotations.NonNull;
 
