@@ -4,6 +4,7 @@
 
 <property name="build" value="build"/>
 <property name="src"   value="src"/>
+<property name="distrib.jar" value="checkingjavaprograms.jar"/>
 
 <property name="pmd.home" value="/home/ian/Applications/pmd" />
 <property name="findbugs.home" value="/home/ian/Applications/findbugs" />
@@ -40,7 +41,7 @@
 		<class location="${build}" />
 		<sourcePath path="${src}" />
 		<!-- Classes needed by our code but that we don't want tested -->
-		<auxClasspath path="tools/pmd-3.9.jar" />
+		<auxClasspath path="${pmd.home}/lib/pmd-3.9.jar" />
 	</findbugs>
 </target>
 
@@ -54,6 +55,14 @@
 		</classpath>
 		<arg value="starting.HelloWorld"/>
 	</java>
+</target>
+
+<target name="jar">
+	<jar file="${build}/${distrib.jar}">
+	<fileset basedir=".">
+		<excludes file="build/**"/>
+	</fileset>
+	</jar>
 </target>
 
 </project>
