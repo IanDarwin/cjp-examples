@@ -8,7 +8,7 @@ public class ShortCanOverflow {
 	public static void main(String[] args) {
 		short i = 0;
 		while (i++ >= 0) {
-			if (i%1000 == 0) {
+			if (i % 1000 == 0) {
 				System.out.print('.');
 			}
 		}
