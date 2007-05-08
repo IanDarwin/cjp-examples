@@ -47,12 +47,14 @@
 	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
 		classpath="${findbugs.home}/lib/findbugs-ant.jar"/>
 	<findbugs home="${findbugs.home}"
-              output="text"
-              outputFile="findbugs-ant-results.txt" >
+		output="text"
+		outputFile="findbugs-ant-results.txt"
+		reportLevel="low">
 		<class location="${build}" />
 		<sourcePath path="${src}" />
 		<!-- Classes needed by our code but that we don't want tested -->
 		<auxClasspath path="${pmd.home}/lib/pmd-3.9.jar" />
+		<systemProperty name="findbugs.maskedfields.locals" value='true'/>
 	</findbugs>
 </target>
 
@@ -70,8 +72,8 @@
 
 <target name="jar">
 	<jar file="${build}/${distrib.jar}">
-	<fileset basedir=".">
-		<excludes file="build/**"/>
+	<fileset dir=".">
+		<exclude name="build/**"/>
 	</fileset>
 	</jar>
 </target>
