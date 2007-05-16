@@ -15,6 +15,9 @@ public class ShortCanOverflow {
 		System.out.println();
 		System.out.printf("" +
 				"Incrementing i made it negative! (Value %d)%n", i);
+		short n = 32767;
+		n++;
+		System.out.println(n);
 	}
 
 }
