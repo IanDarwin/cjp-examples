@@ -1,1 +1,4 @@
 .fbwarnings
+cpd-report.txt
+pmd-ant-results.txt
+findbugs-ant-results.txt
