@@ -9,6 +9,8 @@
 <property name="pmd.home" value="/home/ian/Applications/pmd" />
 <property name="findbugs.home" value="/home/ian/Applications/findbugs" />
 <property name="jpf.home" value="/home/ian/src/javapathfinder" />
+<property name="OPENJDK_CLASSES_SRC" 
+value="/usr/ports/devel/jdk/1.7/w-jdk-1.7.0/openjdk/j2se/src/share/classes"/>
 
 <path id="full.classpath">
 	<fileset dir="${pmd.home}/lib">
@@ -35,10 +37,20 @@
 <target name="cpd">
 	<taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask"
 		classpathref="full.classpath"/>
-	<cpd minimumTokenCount="30" outputFile="cpd-report.txt">
+	<cpd minimumTokenCount="100" outputFile="cpd-report.txt">
 		<fileset dir="${src}">
 			<include name="**/*.java"/>
 			<exclude name="generated/**.java"/>
+		</fileset>
+	</cpd>
+</target>
+
+<target name="cpd-jdk">
+	<taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask"
+		classpathref="full.classpath"/>
+	<cpd minimumTokenCount="50" outputFile="cpd-report.txt">
+		<fileset dir="${OPENJDK_CLASSES_SRC}">
+			<include name="java/lang/*.java"/>
 		</fileset>
 	</cpd>
 </target>
@@ -59,6 +71,7 @@
 </target>
 
 <target name="jpf">
+	<!-- tested with JPF trunk rev 366 -->
 	<java classname="gov.nasa.jpf.JPF" fork="true">
 		<classpath>
 			<pathelement location="${user.home}/javasrc/build"/>
@@ -66,7 +79,8 @@
 			        <include name="**/*.jar"/>
 			</fileset>
 		</classpath>
-		<arg value="starting.HelloWorld"/>
+		<!--arg value="starting.HelloWorld"/-->
+		<arg value="threads.InstantDeadlock"/>
 	</java>
 </target>
 
