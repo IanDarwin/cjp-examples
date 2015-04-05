@@ -10,6 +10,8 @@ this file; that's why it's called README.txt, I suppose.
 
 It tells you in the book how to set these variables, in case
 you don't know.
+I will someday get around to pasting that information here.
+Patch to do so welcomed!
 
 3) There is no #3; see items 1 and 2 above.
 
