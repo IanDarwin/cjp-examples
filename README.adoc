@@ -1,4 +1,4 @@
-README for Checking Java Programs accompanying files.
+= CJS: Checking Java Programs accompanying files.
 
 1) This directory is set up as an Eclipse project and as an Ant-buildable project.
 
