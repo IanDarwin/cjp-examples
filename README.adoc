@@ -1,6 +1,10 @@
-= CJS: Checking Java Programs accompanying files.
+= CJP-Examples: files for _Checking Java Programs_
 
 1) This directory is set up as an Eclipse project and as an Ant-buildable project.
+While most of my goo has transitioned to Maven, this will likely stay on Ant because
+it's just easier to set up many different run things in Ant.
+Plus, one or two of the tools are only available as Ant plugins and, while I do know about
+the maven-ant-plugin, it's still just easier this way.
 
 2) When you install it YOU WILL HAVE TO SET some Eclipse variables
 before it will work! This is expected. Emails asking why it doesn't
@@ -10,7 +14,7 @@ this file; that's why it's called README.txt, I suppose.
 
 It tells you in the book how to set these variables, in case
 you don't know.
-I will someday get around to pasting that information here.
+I will probably get around to pasting that information here one of these days.
 Patch to do so welcomed!
 
 3) There is no #3; see items 1 and 2 above.
@@ -18,4 +22,7 @@ Patch to do so welcomed!
 Thanks for reading Checking Java Programs!
 
 Ian Darwin
-http://cjp.darwinsys.com/
+
+http://cjp.darwinsys.com/[book website]
+
+http://shop.oreilly.com/product/9780596510237.do[Order from O'Reilly]
