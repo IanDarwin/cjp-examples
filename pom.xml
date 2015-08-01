@@ -1,0 +1,82 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.darwinsys</groupId>
+	<artifactId>cjp-examples</artifactId>
+	<version>2.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<inceptionYear>2007</inceptionYear>
+
+	<name>Checking Java Programs examples</name>
+	<description>
+		Examples from Ian's 2007 book Checkin Java Programs,
+		updated for the 2015 video series of the same name.
+	</description>
+	<url>http://darwinsys.com/cjp/</url>
+	<licenses>
+		<license>
+		<name>BSD 2-Clause "New" or "Revised" license</name>
+		<url>http://opensource.org/licenses/BSD-2-Clause</url>
+		<distribution>repo</distribution>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+		<id>ian</id>
+		<name>Ian Darwin</name>
+		</developer>
+	</developers>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+		<javase.version>1.8</javase.version>
+		<maven.compiler.source>${javase.version}</maven.compiler.source>
+		<maven.compiler.target>${javase.version}</maven.compiler.target>
+		<maven.compiler.testSource>${javase.version}</maven.compiler.testSource>
+		<maven.compiler.testTarget>${javase.version}</maven.compiler.testTarget>
+		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
+	</properties>
+
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.3</version>
+				<configuration>
+					<excludes>
+						<exclude>extensions/*/*.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
+	<dependencies>
+
+		<!-- FINDBUGS -->
+		<dependency>
+			<groupId>org.codehaus.mojo</groupId>
+			<artifactId>findbugs-maven-plugin</artifactId>
+			<version>3.0.1</version>
+			<type>maven-plugin</type>
+		</dependency>
+
+		<!-- PMD -->
+		<dependency>
+			<groupId>org.apache.maven.plugins</groupId>
+			<artifactId>maven-pmd-plugin</artifactId>
+			<version>3.5</version>
+			<type>maven-plugin</type>
+		</dependency>
+
+		<!-- JUNIT -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+</project>
