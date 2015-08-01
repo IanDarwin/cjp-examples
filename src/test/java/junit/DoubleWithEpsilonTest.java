@@ -4,12 +4,7 @@ import org.junit.*;
 
 import static org.junit.Assert.*;
 
-public class DoubleWithEpsilon {
-
-	@Test
-	public void isAnybodyListeningQ() {
-		fail("Is anybody listening?");
-	}
+public class DoubleWithEpsilonTest {
 
 	@Test
 	public void testSqrt() {
