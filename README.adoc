@@ -1,11 +1,13 @@
 = CJP-Examples: files for _Checking Java Programs_
 
+This repo was set up in 2007 (in CVS; moved to GitHub in 2015). It was originally
+built with Ant but is now moving to Maven in preparation for some new publication.
+
 == Attention 2007 Book Users
 
-This repo was set up in 2007 (in CVS; moved to GitHub in 2015). It was originally
-built with Ant but is now moving to Maven and will be broken if you try to follow
+The head commit of the master branch  will be broken if you try to follow
 the directions in the 2007 edition of the book. If you still want to follow a
-decade-old pattern you can do `git checkout a1ad04` after cloning the git repo.
+decade-old pattern you must do `git checkout a1ad04` after cloning the git repo.
 
 When you install it YOU WILL HAVE TO SET some Eclipse variables
 before it will work! This is expected. Emails asking why it doesn't
@@ -16,9 +18,10 @@ this file; that's why it's called a README file, I suppose.
 == About
 
 This repo is set up as an Eclipse project and as a Maven-buildable project.
-A few parts of this will likely stay on Ant because
-it's just easier to set up many different run things in Ant.
-Plus, one or two of the tools are only available as Ant plugins.
+Not everything builds or runs at the moment; patches welcome, complaints not so much.
+A few parts of this will indeed likely stay on Ant because
+it's just easier to set up many different run things in Ant
+and because one or two of the tools are only available as Ant plugins.
 While I do know about the maven-ant-plugin, it's still just easier this way.
 
 Thanks for reading/watching _Checking Java Programs_!
