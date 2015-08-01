@@ -1,28 +1,30 @@
 = CJP-Examples: files for _Checking Java Programs_
 
-1) This directory is set up as an Eclipse project and as an Ant-buildable project.
-While most of my goo has transitioned to Maven, this will likely stay on Ant because
-it's just easier to set up many different run things in Ant.
-Plus, one or two of the tools are only available as Ant plugins and, while I do know about
-the maven-ant-plugin, it's still just easier this way.
+== Attention 2007 Book Users
 
-2) When you install it YOU WILL HAVE TO SET some Eclipse variables
+This repo was set up in 2007 (in CVS; moved to GitHub in 2015). It was originally
+built with Ant but is now moving to Maven and will be broken if you try to follow
+the directions in the 2007 edition of the book. If you still want to follow a
+decade-old pattern you can do `git checkout a1ad04` after cloning the git repo.
+
+When you install it YOU WILL HAVE TO SET some Eclipse variables
 before it will work! This is expected. Emails asking why it doesn't
 work out of the box when you haven't read this file are probably going
 to be ignored, but you won't know that if you didn't read
-this file; that's why it's called README.txt, I suppose.
+this file; that's why it's called a README file, I suppose.
 
-It tells you in the book how to set these variables, in case
-you don't know.
-I will probably get around to pasting that information here one of these days.
-Patch to do so welcomed!
+== About
 
-3) There is no #3; see items 1 and 2 above.
+This repo is set up as an Eclipse project and as a Maven-buildable project.
+A few parts of this will likely stay on Ant because
+it's just easier to set up many different run things in Ant.
+Plus, one or two of the tools are only available as Ant plugins.
+While I do know about the maven-ant-plugin, it's still just easier this way.
 
-Thanks for reading Checking Java Programs!
+Thanks for reading/watching _Checking Java Programs_!
 
 Ian Darwin
 
-http://cjp.darwinsys.com/[book website]
+http://cjp.darwinsys.com/[Book website]
 
 http://shop.oreilly.com/product/9780596510237.do[Order from O'Reilly]
