@@ -1,21 +1,19 @@
 package extensions.pmd;
 
-import net.sourceforge.pmd.AbstractRule;
-import net.sourceforge.pmd.ast.ASTMethodDeclaration;
-import net.sourceforge.pmd.ast.Node;
+import java.util.List;
+
+import net.sourceforge.pmd.lang.rule.AbstractRule;
+import net.sourceforge.pmd.lang.ast.Node;
+import net.sourceforge.pmd.RuleContext;
 
 public class DontThrowSQLExceptionRule extends AbstractRule {
 
 	@Override @SuppressWarnings("PMD.SystemPrintln")
-	public Object visit(final ASTMethodDeclaration node, final Object data) {
-		// System.out.printf("DontThrowSQLExceptionRule.visit(%s, %s)%n", node, data);
-		for (int i = 0; i < node.jjtGetNumChildren(); i++) {
-			final Node child = node.jjtGetChild(i);
-
-			// System.out.printf("node %d child %s%n", i, child);
-			if (child.toString().equals("NameList")) {
-				for (int j = 0; j < child.jjtGetNumChildren(); j++) {
-					final Node nameListElement = child.jjtGetChild(j);
+	public void apply(List<? extends Node> nodes, RuleContext ctx) {
+		for (Node node : nodes) {
+			if (node.toString().equals("NameList")) {
+				for (int j = 0; j < node.jjtGetNumChildren(); j++) {
+					final Node nameListElement = node.jjtGetChild(j);
 					System.out.printf("Namelist element %s%n", nameListElement);
 				}
 			}
@@ -23,6 +21,5 @@ public class DontThrowSQLExceptionRule extends AbstractRule {
 		// if (nameList contains SQLException) {
 		//	addViolation(data, node);	// note: reversed order from visit()
 		// }
-		return super.visit(node, data);
 	}
 }
