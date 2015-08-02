@@ -52,6 +52,16 @@
 		</plugins>
 	</build>
 
+	<reporting>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.5</version>
+			</plugin>
+		</plugins>
+	</reporting>
+
 	<dependencies>
 
 		<!-- FINDBUGS -->
@@ -62,22 +72,11 @@
 			<type>maven-plugin</type>
 		</dependency>
 
-		<!-- PMD and its Maven plugin -->
+		<!-- PMD -->
 		<dependency>
 			<groupId>net.sourceforge.pmd</groupId>
 			<artifactId>pmd-core</artifactId>
 			<version>5.3.2</version>
-		</dependency>
-		<dependency>
-			<groupId>net.sourceforge.pmd</groupId>
-			<artifactId>pmd-java</artifactId>
-			<version>5.3.2</version>
-		</dependency>
-		<dependency>
-			<groupId>org.apache.maven.plugins</groupId>
-			<artifactId>maven-pmd-plugin</artifactId>
-			<version>3.5</version>
-			<type>maven-plugin</type>
 		</dependency>
 
 		<!-- JUNIT -->
@@ -88,5 +87,6 @@
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 
 </project>
