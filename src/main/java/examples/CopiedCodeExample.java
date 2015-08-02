@@ -4,6 +4,8 @@ import java.lang.StringBuilder;
 
 /**
  * Something for PMD's CPD to chew on
+ * DO NOT clean up this code; it is meant to let PMD and friends show their
+ * error detection abilities!
  */
 public class CopiedCodeExample {
 

@@ -4,6 +4,10 @@ import java.io.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+/**
+ * WARNING - this class has some deliberate errors in it.
+ * DO NOT clean up this file, or you will break the error detection examples!
+ */
 public class Action {
 	JFrame theFrame;
 	JFileChooser chooser;
@@ -28,7 +32,7 @@ public class Action {
 							JOptionPane.YES_NO_OPTION);
 					System.err.println(ret);
 					if (ret != 0);	// "Yes" is the 0th option...
-					return;
+						return;
 				}
 				doSave(file);
 			}
