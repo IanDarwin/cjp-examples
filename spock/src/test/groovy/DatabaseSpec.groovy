@@ -1,5 +1,4 @@
 import groovy.sql.Sql
-
 import spock.lang.*
 
 class DatabaseSpec extends Specification {
@@ -11,9 +10,8 @@ class DatabaseSpec extends Specification {
 			def found = false
 			def r = sql.rows("select name from javatest order by lower(name)");
 			r.each() {
-				// row -> println "${row.name}"
+				row -> println "${row.name}"
 				if (row.name == 'spock') {
-					println("Their database is logical, captain");
 					found = true;
 				}
 			}
