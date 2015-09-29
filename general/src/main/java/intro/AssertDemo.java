@@ -3,7 +3,7 @@ package intro;
 public class AssertDemo {
 
 	public static double myFunction(double d, double e) {
-		System.out.printf("AssertDemo.myFunction(%e, %e)%n", d, e);
+		System.out.printf("AssertDemo.myFunction(%f, %f)%n", d, e);
 
 		// pre-assertion:
 		assert d < e : "first argument must be less than second";
