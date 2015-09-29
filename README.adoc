@@ -2,17 +2,24 @@
 
 This repo was set up in 2007 (in CVS; moved to GitHub in 2015). It was originally
 built with Ant but is now moving to Maven in preparation for some new publication.
+
+This repo is set up as *multiple projects*, each an Eclipse project and a Maven-buildable project.
+Not everything builds or runs at the moment: patches welcome; complaints, not so much.
+A few parts of this will indeed likely stay on Ant because
+one or two of the tools are only available as Ant plugins.
+While I do know about the maven-ant-plugin, it's still just easier this way.
+
 There are several main directories:
 
-. general is the catch-all containing most demos for JUnit, PMD, Findbugs and JPF;
-. spock contains the Spock examples;
-. jpademo contains some web-related tests.
+. _general_ is the catch-all containing most demos for JUnit, PMD, Findbugs and JPF;
+. _spock_ contains the Spock examples;
+. _clublist_ contains some web-related tests; actually a submodule to an existing project.
 
-== Attention 2007 Book Users
+== Attention Users of the 2007 Book Version
 
-The head commit of the master branch  will be broken if you try to follow
+The head commit of the master branch  will be totally broken if you try to follow
 the directions in the 2007 edition of the book. If you still want to follow a
-decade-old pattern you must do `git checkout a1ad04` after cloning the git repo.
+decade-old book you will have to do `git checkout a1ad04` after cloning the git repo.
 
 When you install it YOU WILL HAVE TO SET some Eclipse variables
 before it will work! This is expected. Emails asking why it doesn't
@@ -20,13 +27,7 @@ work out of the box when you haven't read this file are probably going
 to be ignored, but you won't know that if you didn't read
 this file; that's why it's called a README file, I suppose.
 
-== About
-
-This repo is set up as *multiple projects*, each an Eclipse project and a Maven-buildable project.
-Not everything builds or runs at the moment: patches welcome; complaints, not so much.
-A few parts of this will indeed likely stay on Ant because
-one or two of the tools are only available as Ant plugins.
-While I do know about the maven-ant-plugin, it's still just easier this way.
+== Contact
 
 Thanks for reading/watching _Checking Java Programs_!
 
