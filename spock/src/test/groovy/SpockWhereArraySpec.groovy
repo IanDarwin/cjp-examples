@@ -2,9 +2,9 @@ import spock.lang.*;
 
 class SpockWhereArraySpec extends spock.lang.Specification {
     def "Test"() {
-        expect: x < y
+        expect: value * value == square
         where:
-        x << [1,2,3]
-        y << [2,3,4]
+        value << [1,2,3]
+        square << [1,4,9]
     }   
 }
