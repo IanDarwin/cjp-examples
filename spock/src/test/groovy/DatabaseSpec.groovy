@@ -7,17 +7,15 @@ class DatabaseSpec extends Specification {
 	@Shared def sql = Sql.newInstance(db.url, db.user, db.password, db.driver)
 
 	def "DatabaseTest"() {
+		setup:
 			def found = false
-			def r = sql.rows("select name from javatest order by lower(name)");
-			r.each() {
-				row -> println "${row.name}"
-				if (row.name == 'spock') {
+			sql.eachRow("select name from javatest order by lower(name)") { r->
+				// println r.name
+				if (r.name == 'spock') {
 					found = true;
 				}
 			}
 		expect:
-			r.size() > 0
 			found
 	}
 }
-
