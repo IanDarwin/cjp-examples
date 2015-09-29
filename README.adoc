@@ -2,6 +2,11 @@
 
 This repo was set up in 2007 (in CVS; moved to GitHub in 2015). It was originally
 built with Ant but is now moving to Maven in preparation for some new publication.
+There are several main directories:
+
+. general is the catch-all containing most demos for JUnit, PMD, Findbugs and JPF;
+. spock contains the Spock examples;
+. jpademo contains some web-related tests.
 
 == Attention 2007 Book Users
 
@@ -17,11 +22,10 @@ this file; that's why it's called a README file, I suppose.
 
 == About
 
-This repo is set up as an Eclipse project and as a Maven-buildable project.
-Not everything builds or runs at the moment; patches welcome, complaints not so much.
+This repo is set up as *multiple projects*, each an Eclipse project and a Maven-buildable project.
+Not everything builds or runs at the moment: patches welcome; complaints, not so much.
 A few parts of this will indeed likely stay on Ant because
-it's just easier to set up many different run things in Ant
-and because one or two of the tools are only available as Ant plugins.
+one or two of the tools are only available as Ant plugins.
 While I do know about the maven-ant-plugin, it's still just easier this way.
 
 Thanks for reading/watching _Checking Java Programs_!
