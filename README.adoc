@@ -1,9 +1,11 @@
 = CJP-Examples: files for _Checking Java Programs_
 
 This repo was set up in 2007 (in CVS; moved to GitHub in 2015). It was originally
-built with Ant but is now moving to Maven in preparation for some new publication.
+built with Ant but has mostly been moved to Maven to simplify classpath.
+Classpath is also the reason I chose to split this repo into
+*multiple projects*, each an Eclipse project and a Maven-buildable project.
+Otherwise the classpath (and the Maven pom file) would just be too huge.
 
-This repo is set up as *multiple projects*, each an Eclipse project and a Maven-buildable project.
 Not everything builds or runs at the moment: patches welcome; complaints, not so much.
 A few parts of this will indeed likely stay on Ant because
 one or two of the tools are only available as Ant plugins.
