@@ -3,8 +3,8 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>cjp</groupId>
-  <artifactId>spock-tests</artifactId>
+  <groupId>com.darwinsys.cjp</groupId>
+  <artifactId>cjp-spock</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>jar</packaging>
   <inceptionYear>2015</inceptionYear>
