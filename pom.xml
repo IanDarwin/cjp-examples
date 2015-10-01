@@ -14,5 +14,6 @@
 		<module>general</module>
 		<module>mockery</module>
 		<module>spock</module>
+		<module>findbugs</module>
     </modules>
 </project>
