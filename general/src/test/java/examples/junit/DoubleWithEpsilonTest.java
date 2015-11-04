@@ -1,4 +1,4 @@
-package junit;
+package examples.junit;
 
 import org.junit.*;
 
