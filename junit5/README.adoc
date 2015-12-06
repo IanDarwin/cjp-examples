@@ -1,0 +1,8 @@
+== JUnit5
+
+As of this writing (December, 2015), JUnit 5 is still very much a draft
+(which is why we must fetch it from the Snapshot Repository!).
+These few simple examples illustrate a small part of the improvements
+in JUnit 5, but it is all subject to change.
+Accordingly, if you bump the version number of the JUnit library,
+expect breakage!
