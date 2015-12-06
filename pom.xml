@@ -12,6 +12,7 @@
 
     <modules>
 		<module>general</module>
+		<module>junit5</module>
 		<module>mockery</module>
 		<module>spock</module>
 		<module>findbugs</module>
