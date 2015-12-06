@@ -1,9 +1,9 @@
 package examples.junit;
 
 import static org.hamcrest.Matchers.allOf;
+import static org.hamcrest.Matchers.containsString;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.instanceOf;
-import static org.hamcrest.Matchers.isEmptyOrNullString;
 import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertThat;
 
@@ -19,6 +19,6 @@ public class HamcrestDemoTest {
 		assertThat("a b c", allOf(
 			equalTo("a b c"),
 			instanceOf(String.class),
-			not(isEmptyOrNullString())));
+			not(containsString("x y z"))));
 	}
 }
