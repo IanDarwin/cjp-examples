@@ -1,6 +1,7 @@
 package demo;
 
-import java.util.*;
+import java.util.Arrays;
+import java.util.List;
 
 public class PersonDaoStub implements PersonDao {
 	Person p1 = new Person(0, "First", "Person");

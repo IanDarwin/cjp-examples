@@ -7,7 +7,7 @@ public class PersonController {
 
 	private PersonDao dao;
 
-	public PersonHandler(PersonDao dao) {
+	public PersonController(PersonDao dao) {
 		this.dao = dao;
 	}
 
@@ -23,5 +23,10 @@ public class PersonController {
 				}
 		}
 		return false;
+	}
+
+	/** Simple delegation method to find a person by Id */
+	public Person findPersonById(long i) {
+		return dao.getById(i);
 	}
 }

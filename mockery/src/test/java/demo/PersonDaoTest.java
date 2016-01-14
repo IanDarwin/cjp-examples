@@ -1,10 +1,17 @@
 package demo;
 
-import java.util.*;
+import static org.hamcrest.Matchers.equalTo;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertThat;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
-import org.junit.*;
-import static org.mockito.Mockito.*;
-import static org.junit.Assert.*;
+import java.util.Arrays;
+
+import org.junit.Before;
+import org.junit.Test;
 
 public class PersonDaoTest {
 
@@ -22,12 +29,11 @@ public class PersonDaoTest {
 	Person[] people = {p1, p2};
 
 	@Test
-	public void testControllerCallsDao() {
+	public void testControllerCallsDaoGetAll() {
 		// Condition the Mock
 		when(mockPersonDao.getAll()).thenReturn(Arrays.asList(people));
-		when(mockPersonDao.getId(1)).thenReturn(new Person(1, "Ashlie", "Madison"));
-
-		// Now the actual test - we know there's no such person.
+		
+		// Now the actual test - we know there's no such person in our fake data.
 		boolean b = testSubject.checkIfPersonExists("Ashlie", "Madison");
 
 		// Test the expectations
@@ -37,4 +43,12 @@ public class PersonDaoTest {
 		// Test the final result
 		assertFalse(b);
 	}
+	
+	@Test
+	public void testControllerCallsDaoGetById() {
+		when(mockPersonDao.getById(1)).thenReturn(new Person(1, "Ashlie", "Madison"));
+		Person p = testSubject.findPersonById(1);
+		assertThat(p.name(), equalTo("Ashlie Madison"));
+	}
+
 }
