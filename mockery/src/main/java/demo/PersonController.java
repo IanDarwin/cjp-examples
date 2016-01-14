@@ -1,9 +1,9 @@
 package demo;
 
-/** This is a fake data layer just to demonstrate use of mocking,
- * not intended to be best practices way of architecting your application.
+/** 
+ * This is a fake data layer just to demonstrate use of mocking.
  */
-public class PersonHandler {
+public class PersonController {
 
 	private PersonDao dao;
 
@@ -12,7 +12,7 @@ public class PersonHandler {
 	}
 
 	/** 
-	 * Again, we know that this could more realistically be done in the data 
+	 * Again, this could more realistically be done in the data 
 	 * layer with a "Where" clause...
 	 */
 	public boolean checkIfPersonExists(String firstName, String lastName) {

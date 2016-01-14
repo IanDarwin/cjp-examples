@@ -9,12 +9,12 @@ import static org.junit.Assert.*;
 public class PersonDaoTest {
 
 	private PersonDao mockPersonDao;
-	private PersonHandler testSubject;
+	private PersonController testSubject;
 
 	@Before
 	public void setup() {
 		mockPersonDao = mock(PersonDao.class);
-		testSubject= new PersonHandler(mockPersonDao);
+		testSubject= new PersonController(mockPersonDao);
 	}
 
 	Person p1 = new Person(0, "First", "Person");
@@ -22,16 +22,19 @@ public class PersonDaoTest {
 	Person[] people = {p1, p2};
 
 	@Test
-	public void testHandlerCallsDao() {
+	public void testControllerCallsDao() {
 		// Condition the Mock
 		when(mockPersonDao.getAll()).thenReturn(Arrays.asList(people));
-		// when(mockPersonDao.getId(1)).thenReturn(new Person(1, "Ashlie", "Madison"));
+		when(mockPersonDao.getId(1)).thenReturn(new Person(1, "Ashlie", "Madison"));
 
-		// Now the actual test
+		// Now the actual test - we know there's no such person.
 		boolean b = testSubject.checkIfPersonExists("Ashlie", "Madison");
 
 		// Test the expectations
-		verify(mockPersonDao, times(1)).getAll(); // also atLeastOnce(), never()
+		verify(mockPersonDao, times(1)).getAll(); 
+		// Could also use atLeastOnce(), never(), ...
+
+		// Test the final result
 		assertFalse(b);
 	}
 }
