@@ -48,6 +48,7 @@ public class PersonDaoTest {
 	public void testControllerCallsDaoGetById() {
 		when(mockPersonDao.getById(1)).thenReturn(new Person(1, "Ashlie", "Madison"));
 		Person p = testSubject.findPersonById(1);
+		verify(mockPersonDao, times(1)).getById(1);
 		assertThat(p.name(), equalTo("Ashlie Madison"));
 	}
 
