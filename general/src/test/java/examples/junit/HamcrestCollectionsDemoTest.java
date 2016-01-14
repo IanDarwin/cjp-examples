@@ -13,7 +13,7 @@ public class HamcrestCollectionsDemoTest {
 	@Test
 	public void showSimpleHamcrestWorking() {
 		
-		List<String> data = Arrays.asList("One", "Two", "Three", "Four");
-		assertThat(data, hasItems("Two", "Four"));
+		List<String> actual = Arrays.asList("One", "Two", "Three", "Four");
+		assertThat(actual, hasItems("Two", "Four"));
 	}
 }
