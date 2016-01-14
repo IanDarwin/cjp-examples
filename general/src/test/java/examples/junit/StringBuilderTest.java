@@ -8,7 +8,7 @@ import org.junit.Test;
 public class StringBuilderTest {
     @Test
     public void testAppendSimple() {
-        StringBuffer sb = new StringBuffer("Hello");
+        StringBuilder sb = new StringBuilder("Hello");
         sb.append(',');
         sb.append(' ');
         sb.append("World");
@@ -20,6 +20,15 @@ public class StringBuilderTest {
     @Before
     public void init() {
         subject = new StringBuilder();
+    }
+    
+    @Test
+    public void testAppendBetter() {
+        subject.append("Hello");
+        subject.append(',');
+        subject.append(' ');
+        subject.append("World");
+        assertEquals("Test Append", "Hello, World", subject.toString());
     }
     
     @Test
