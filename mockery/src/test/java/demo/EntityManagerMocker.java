@@ -1,20 +1,23 @@
 package demo;
 
-import java.util.*;
+import static org.junit.Assert.assertEquals;
+import static org.mockito.Mockito.mock;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
+import static org.mockito.Mockito.when;
 
-import javax.persistence.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 
-import org.junit.*;
-import static org.mockito.Mockito.*;
-import static org.junit.Assert.*;
+import org.junit.BeforeClass;
+import org.junit.Test;
 
 public class EntityManagerMocker {
 
-	private EntityManagerFactory emf;
-	private EntityManager em;
-
-	@Before
-	public void setup() {
+	private static EntityManagerFactory emf;
+	
+	@BeforeClass
+	public static void setup() {
 		emf = mock(EntityManagerFactory.class);
 		when (emf.createEntityManager()).thenReturn(mock(EntityManager.class));
 	}
@@ -22,7 +25,7 @@ public class EntityManagerMocker {
 	@Test
 	public void testHandlerCallsDao() {
 		// Condition the Mock
-		em = emf.createEntityManager();
+		EntityManager em = emf.createEntityManager();
 		when(em.find(Person.class, 1L)).thenReturn(new Person(1, "Ashlie", "Madison"));
 
 		// Now the actual test
