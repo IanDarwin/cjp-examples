@@ -15,23 +15,23 @@ public class EntityManagerMocker {
 
 	@Before
 	public void setup() {
-		em = mock(EntityManager.class);
 		emf = mock(EntityManagerFactory.class);
-		when (emf.createEntityManager()).thenReturn(em);
+		when (emf.createEntityManager()).thenReturn(mock(EntityManager.class));
 	}
 
 	@Test
 	public void testHandlerCallsDao() {
 		// Condition the Mock
-		when(em.find(1L, Person.class)).thenReturn(new Person(1, "Ashlie", "Madison"));
+		em = emf.createEntityManager();
+		when(em.find(Person.class, 1L)).thenReturn(new Person(1, "Ashlie", "Madison"));
 
 		// Now the actual test
-		// Simulaate some real EntityManager-using DAO code
-		Person p = em.find(1, Person.class);
+		// Simulate some real EntityManager-using DAO code
+		Person p = em.find(Person.class, 1L);
 
 		// Test the expectations
 		verify(emf, times(1)).createEntityManager();
-		verify(em, times(1)).find(1, Person.class);
+		verify(em, times(1)).find(Person.class, 1L);
 		assertEquals("Ashlie Madison", p.name());
 	}
 }
