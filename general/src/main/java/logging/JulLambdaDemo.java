@@ -16,6 +16,7 @@ public class JulLambdaDemo {
 		// you see both the systrace from the toString,
 		// and the logging output. As it is here,
 		// you don't see either, so the toString() is not called!
+		// The interface used is Supplier<String>
 		myLogger.finest(() -> "I created this object: " + o);
 	}
 	
