@@ -84,6 +84,14 @@
 			<artifactId>java-hamcrest</artifactId>
 			<version>2.0.0.0</version>
 		</dependency>
+		
+		<!-- EqualsVerifier -->
+		<dependency>
+			<groupId>nl.jqno.equalsverifier</groupId>
+			<artifactId>equalsverifier</artifactId>
+			<version>1.7.6</version>
+			<scope>test</scope>
+		</dependency>
 
 	</dependencies>
 
