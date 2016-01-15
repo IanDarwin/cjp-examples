@@ -1,15 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-  <name>cjp-junit5</name>
-  <comment>Examples from Ian&apos;s 2007 book Checkin Java Programs,
+	<name>cjp-junit5</name>
+	<comment>Examples from Ian&apos;s 2007 book Checkin Java Programs,
 		updated for the 2015 video series of the same name.</comment>
-  <projects/>
-  <buildSpec>
-    <buildCommand>
-      <name>org.eclipse.jdt.core.javabuilder</name>
-    </buildCommand>
-  </buildSpec>
-  <natures>
-    <nature>org.eclipse.jdt.core.javanature</nature>
-  </natures>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+		<buildCommand>
+			<name>org.eclipse.m2e.core.maven2Builder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.m2e.core.maven2Nature</nature>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
 </projectDescription>
