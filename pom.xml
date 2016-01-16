@@ -17,5 +17,6 @@
 		<module>spock</module>
 		<module>findbugs</module>
 		<module>pmd</module>
+		<!-- <module>jpf</module> -->
     </modules>
 </project>
