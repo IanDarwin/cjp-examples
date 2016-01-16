@@ -40,4 +40,10 @@ public class StringBuilderTest {
     	// While here, assert that it returns an empty string not a null string
     	assertEquals("", subject.toString());
     }
+
+	// Test Exception Handling
+	@Test(expected=IndexOutOfBoundsException.class)
+	public void StringBuilderChecksIndex() {
+		new StringBuilder().insert(-1, "Where does this go?");
+	}
 }
