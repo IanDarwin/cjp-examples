@@ -1,10 +1,11 @@
 = CJP-Examples: files for _Checking Java Programs_
 
-This repo was set up in 2007 (in CVS; moved to GitHub in 2015). It was originally
-built with Ant but has mostly been moved to Maven to simplify classpath.
+I've been an advocate of advanced techniques and strong testing for most of my life as a software developer.
+This repository was first set up in 2007 (in CVS; moved to GitHub in 2015).
+It was originally built with Ant but has mostly been moved to Maven to simplify classpath.
 Classpath is also the reason I chose to split this repo into
 *multiple projects*, each an Eclipse project and a Maven-buildable project.
-Otherwise the classpath (and the Maven pom file) would just be too huge.
+Otherwise the classpath (and the Maven pom file) would become overly large.
 
 Not everything builds or runs at the moment: patches welcome; complaints, not so much.
 A few parts of this will indeed likely stay on Ant because
@@ -15,19 +16,34 @@ There are several main directories:
 
 . _general_ is the catch-all containing most demos for JUnit, PMD, Findbugs and JPF;
 . _spock_ contains the Spock examples;
-. _clublist_ contains some web-related tests; actually a submodule to an existing project.
+. _junit5_ contains forward-looking statements about the next release of JUnit.
+. _pmd_ contains some examples of PMD
+. _findbugs_ contains some examples of FindBugs
+. _jpf_ - not maintained, contains JPF examples from 2007, using Ant.
+
+== The Sad Tale of JPF
+
+JavaPathFinder (JPF) is a really nice set of tools for examine state modelling of your Java code.
+It was created at NASA to verify the software used in the Mars Rover control program 
+(not the embedded software in the device, but the ground-based controller software).
+Unfortunately, it has never been easy to get started with, nor has it made the leap from
+Ant to Maven - although a third-party project set up Maven repositories, these have become
+lost in the sands of time. There is a jpf-maven-plugin project which you can find and build,
+but since the repositories themselves are no longer available, it is probably pointless.
+"Look on my works, ye mighty, and despair..."
 
 == Attention Users of the 2007 Book Version
 
 The head commit of the master branch  will be totally broken if you try to follow
 the directions in the 2007 edition of the book. If you still want to follow a
-decade-old book you will have to do `git checkout a1ad04` after cloning the git repo.
+decade-old book you should only have to do `git checkout a1ad04` after cloning the git repo.
 
 When you install it YOU WILL HAVE TO SET some Eclipse variables
 before it will work! This is expected. Emails asking why it doesn't
 work out of the box when you haven't read this file are probably going
 to be ignored, but you won't know that if you didn't read
 this file; that's why it's called a README file, I suppose.
+The details are in the 2007 book.
 
 == Contact
 
@@ -37,4 +53,4 @@ Ian Darwin
 
 http://cjp.darwinsys.com/[Book website]
 
-http://shop.oreilly.com/product/9780596510237.do[Order from O'Reilly]
+http://shop.oreilly.com/product/9780596510237.do[Order the 2007 book from O'Reilly]
