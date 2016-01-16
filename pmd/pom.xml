@@ -2,14 +2,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.darwinsys.cjp</groupId>
-	<artifactId>cjp-general</artifactId>
+	<artifactId>cjp-pmd</artifactId>
 	<version>2.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
 	<inceptionYear>2007</inceptionYear>
 
-	<name>Checking Java Programs examples</name>
+	<name>Checking Java Programs PMD examples</name>
 	<description>
-		Examples from Ian's 2007 book Checkin Java Programs,
+		PMD Examples from Ian's 2007 book Checkin Java Programs,
 		updated for the 2015 video series of the same name.
 	</description>
 	<url>http://darwinsys.com/cjp/</url>
@@ -38,21 +38,24 @@
 		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 	</properties>
 
-	<build>
+	<reporting>
 		<plugins>
 			<plugin>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.3</version>
-				<configuration>
-					<excludes>
-						<exclude>extensions/jpf/*.java</exclude>
-					</excludes>
-				</configuration>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>3.5</version>
 			</plugin>
 		</plugins>
-	</build>
+	</reporting>
 
 	<dependencies>
+
+		<!-- PMD -->
+		<dependency>
+			<groupId>net.sourceforge.pmd</groupId>
+			<artifactId>pmd-core</artifactId>
+			<version>5.4.1</version>
+		</dependency>
 
 		<!-- JUNIT -->
 		<dependency>
@@ -69,14 +72,6 @@
 			<version>2.0.0.0</version>
 		</dependency>
 		
-		<!-- EqualsVerifier -->
-		<dependency>
-			<groupId>nl.jqno.equalsverifier</groupId>
-			<artifactId>equalsverifier</artifactId>
-			<version>1.7.6</version>
-			<scope>test</scope>
-		</dependency>
-
 	</dependencies>
 
 </project>

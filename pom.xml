@@ -16,5 +16,6 @@
 		<module>mockery</module>
 		<module>spock</module>
 		<module>findbugs</module>
+		<module>pmd</module>
     </modules>
 </project>

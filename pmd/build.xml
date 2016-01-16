@@ -1,0 +1,95 @@
+<project name="Checking Java Programs: examples">
+
+<!-- Do not ask me if you can use this file in your project. Just use it! -->
+
+<property name="build" value="build"/>
+<property name="src"   value="src"/>
+<property name="distrib.jar" value="checkingjavaprograms.jar"/>
+
+<property name="pmd.home" value="/home/ian/Applications/pmd" />
+<property name="findbugs.home" value="/home/ian/Applications/findbugs" />
+<property name="jpf.home" value="/home/ian/src/javapathfinder" />
+<property name="OPENJDK_CLASSES_SRC" 
+value="/usr/ports/devel/jdk/1.7/w-jdk-1.7.0/openjdk/j2se/src/share/classes"/>
+
+<path id="full.classpath">
+	<fileset dir="${pmd.home}/lib">
+		<include name="*.jar"/>
+	</fileset>
+	<dirset dir=".">
+		<include name="${build}"/>
+	</dirset>
+</path>
+
+<target name="pmd">
+	<taskdef name="pmd" classname="net.sourceforge.pmd.ant.PMDTask"
+		classpathref="full.classpath"/>
+	<pmd shortFilenames="true">
+		<ruleset>basic,imports</ruleset>
+		<ruleset>MyPMDRules.xml</ruleset>
+		<formatter type="text" toFile="pmd-ant-results.txt"/>
+		<fileset dir="${src}">
+			<include name="**/*.java"/>
+		</fileset>
+	</pmd>
+</target>
+
+<target name="cpd">
+	<taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask"
+		classpathref="full.classpath"/>
+	<cpd minimumTokenCount="100" outputFile="cpd-report.txt">
+		<fileset dir="${src}">
+			<include name="**/*.java"/>
+			<exclude name="generated/**.java"/>
+		</fileset>
+	</cpd>
+</target>
+
+<target name="cpd-jdk">
+	<taskdef name="cpd" classname="net.sourceforge.pmd.cpd.CPDTask"
+		classpathref="full.classpath"/>
+	<cpd minimumTokenCount="50" outputFile="cpd-report.txt">
+		<fileset dir="${OPENJDK_CLASSES_SRC}">
+			<include name="java/lang/*.java"/>
+		</fileset>
+	</cpd>
+</target>
+
+<target name="findbugs">
+	<taskdef name="findbugs" classname="edu.umd.cs.findbugs.anttask.FindBugsTask"
+		classpath="${findbugs.home}/lib/findbugs-ant.jar"/>
+	<findbugs home="${findbugs.home}"
+		output="text"
+		outputFile="findbugs-ant-results.txt"
+		reportLevel="low">
+		<class location="${build}" />
+		<sourcePath path="${src}" />
+		<!-- Classes needed by our code but that we don't want tested -->
+		<auxClasspath path="${pmd.home}/lib/pmd-3.9.jar" />
+		<systemProperty name="findbugs.maskedfields.locals" value='true'/>
+	</findbugs>
+</target>
+
+<target name="jpf">
+	<!-- tested with JPF trunk rev 366 -->
+	<java classname="gov.nasa.jpf.JPF" fork="true">
+		<classpath>
+			<pathelement location="${user.home}/javasrc/build"/>
+			<fileset dir="${jpf.home}">
+			        <include name="**/*.jar"/>
+			</fileset>
+		</classpath>
+		<!--arg value="starting.HelloWorld"/-->
+		<arg value="threads.InstantDeadlock"/>
+	</java>
+</target>
+
+<target name="jar">
+	<jar file="${build}/${distrib.jar}">
+	<fileset dir=".">
+		<exclude name="build/**"/>
+	</fileset>
+	</jar>
+</target>
+
+</project>
