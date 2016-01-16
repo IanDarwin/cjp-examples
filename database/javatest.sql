@@ -1,3 +1,7 @@
+-- Stored in the main website, don't need another database just for one table
+
+\c website;
+
 --
 -- Name: javatestseq; Type: SEQUENCE; Schema: public; Owner: javatest
 --
