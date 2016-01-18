@@ -1,0 +1,20 @@
+INSTEAD OF THIS:
+
+    Scenario: Saying Hello to me
+                When I login as "BilliBezel" to my computer
+                Then It should say "Hello, BilliBezel"
+    Scenario: Saying Hello to me
+                When I login as "MaryBett" to my computer
+                Then It should say "Hello, MaryBett"
+    // and many more copy and pastes...
+    
+USE THIS
+
+    Scenario Outline: Saying Hello to all of us
+                When I login as <name> to my computer
+                Then It should say <greeting>
+    Examples:   
+    | name       | greeting |
+    | BilliBezel | Hello, BilliBezel |
+    | MaryBett   | Hello, MaryBett |
+
