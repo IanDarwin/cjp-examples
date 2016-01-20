@@ -1,7 +1,10 @@
 #!/bin/sh
 
-# for some reason Arquillian requires this jar, even though it's probably never used.
+# For some reason Arquillian requires this jar, even though it's probably 
+# never used.
 
-# The version number of 'jdk' is crude, but, running this does seem to solve the dependency problem.
+# The version number of 'jdk' is crude, but, running this does seem to 
+# partly solve the dependency problem - removing all but one error.
 
+# Change the argument after -Dfile= to whereever this jar is located in your JDK
 mvn install:install-file -Dfile=/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/lib/jconsole.jar -DgroupId=sun.jdk -DartifactId=jconsole -Dversion=jdk -Dpackaging=jar
