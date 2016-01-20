@@ -18,6 +18,7 @@ public class HelloTest {
     public static JavaArchive createDeployment() {
         return ShrinkWrap.create(JavaArchive.class)
             .addClasses(Hello.class, Helloifier.class)
+            // Needed on older Java EE (5 and 6) to trigger CDI startup
             .addAsManifestResource(EmptyAsset.INSTANCE, "beans.xml");
     }
 

@@ -2,7 +2,6 @@ package arqdemo;
 
 import javax.inject.Inject;
 
-
 /**
  * A POJO that uses a Helloifier injected by CDI.
  */
