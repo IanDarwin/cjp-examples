@@ -46,20 +46,14 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.apache.httpcomponents</groupId>
-			<artifactId>httpclient</artifactId>
-			<version>4.5.1</version>
-		</dependency>
-
-		<dependency>
 				<groupId>org.jboss.arquillian.junit</groupId>
 				<artifactId>arquillian-junit-container</artifactId>
 				<scope>test</scope>
 		</dependency>
 	</dependencies>
+
 	<profiles>
-		<profile>
-				<id>arquillian-weld-ee-embedded</id>
+		<profile><id>arquillian-weld-ee-embedded</id>
 				<dependencies>
 					<dependency>
 						<groupId>org.jboss.spec</groupId>
@@ -88,8 +82,7 @@
 					</dependency>
 				</dependencies>
 		</profile>
-		<profile>
-				<id>arquillian-glassfish-embedded</id>
+		<profile><id>arquillian-glassfish-embedded</id>
 				<dependencies>
 					<dependency>
 						<groupId>org.jboss.arquillian.container</groupId>
@@ -105,8 +98,7 @@
 					</dependency>
 				</dependencies>
 		</profile>
-		<profile>
-				<id>arquillian-jbossas-managed</id>
+		<profile><id>arquillian-jbossas-managed</id>
 				<dependencies>
 					<dependency>
 						<groupId>org.jboss.spec</groupId>
