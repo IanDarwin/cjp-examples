@@ -98,7 +98,7 @@
 					</dependency>
 				</dependencies>
 		</profile>
-		<profile><id>arquillian-jbossas-managed</id>
+		<profile><id>arquillian-jbossas-remote</id>
 				<dependencies>
 					<dependency>
 						<groupId>org.jboss.spec</groupId>
