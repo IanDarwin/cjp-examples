@@ -8,7 +8,7 @@ class MyArrayListSpec extends Specification {
             myArrayList.clear()
         then:
             myArrayList.size() == 0
-            !myArrayList    // Shorter form based on meaning of 'truth' above.
+            !myArrayList    // Shorter form based on meaning of 'truth' in Groovy.
     }
 }
 
