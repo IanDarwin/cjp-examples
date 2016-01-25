@@ -12,11 +12,16 @@
 
     <modules>
 		<module>general</module>
-		<module>junit5</module>
 		<module>mockery</module>
+		<module>arquillian</module>
+		<module>cucumber</module>
+		<module>junit5</module>
 		<module>spock</module>
+		<module>coverage</module>
 		<module>findbugs</module>
 		<module>pmd</module>
 		<!-- <module>jpf</module> -->
+		<!-- <module>database</module> -->
+		<!-- <module>webdriver</module> -->
     </modules>
 </project>
