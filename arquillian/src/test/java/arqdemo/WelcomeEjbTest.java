@@ -19,7 +19,7 @@ public class WelcomeEjbTest {
 	
     @Deployment
     public static JavaArchive createDeployment() {
-        return ShrinkWrap.create(JavaArchive.class)
+        return ShrinkWrap.create(JavaArchive.class, "helloejb.jar")
             .addClasses(WelcomeEjbTest.class, WelcomeEjb.class, Helloifier.class);
     }
 
