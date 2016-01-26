@@ -1,6 +1,6 @@
 import spock.lang.*;
 
-class SpocWithWhereSpec extends Specification {
+class SpockWithWhereSpec extends Specification {
 	def "Test of Squares"() {
 		expect:
 			value * value == square
