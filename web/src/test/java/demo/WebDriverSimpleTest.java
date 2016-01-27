@@ -35,8 +35,6 @@ public class WebDriverSimpleTest {
         // Verify the title of the page
         assertTrue("Page title", driver.getTitle().contains("O'Reilly Search"));
 
-        
-        System.out.println(driver.getPageSource());
         // Verify the search results
 		assertTrue("found", driver.getPageSource().contains("Java Cookbook"));
 
