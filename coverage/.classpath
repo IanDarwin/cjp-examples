@@ -1,82 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
-  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
-  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
-  <classpathentry kind="output" path="target/classes"/>
-  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
-  <classpathentry kind="var" path="M2_REPO/junit/junit/4.11/junit-4.11.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/hamcrest/java-hamcrest/2.0.0.0/java-hamcrest-2.0.0.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/codehaus/mojo/cobertura-maven-plugin/2.7/cobertura-maven-plugin-2.7.jar"/>
-  <classpathentry kind="var" path="M2_REPO/net/sourceforge/cobertura/cobertura/2.1.1/cobertura-2.1.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm/5.0.1/asm-5.0.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm-tree/5.0.1/asm-tree-5.0.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm-commons/5.0.1/asm-commons-5.0.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm-util/5.0.1/asm-util-5.0.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/ow2/asm/asm-analysis/5.0.1/asm-analysis-5.0.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/oro/oro/2.0.8/oro-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/ant/ant/1.8.3/ant-1.8.3.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/ant/ant-launcher/1.8.3/ant-launcher-1.8.3.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/ant/ant-junit/1.8.3/ant-junit-1.8.3.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/mortbay/jetty/servlet-api-2.5/6.1.14/servlet-api-2.5-6.1.14.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/mortbay/jetty/jetty/6.1.14/jetty-6.1.14.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/mortbay/jetty/jetty-util/6.1.14/jetty-util-6.1.14.jar"/>
-  <classpathentry kind="lib" path="/Library/Java/JavaVirtualMachines/jdk1.8.0.jdk/Contents/Home/lib/tools.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.7.5/slf4j-api-1.7.5.jar"/>
-  <classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-classic/1.0.13/logback-classic-1.0.13.jar"/>
-  <classpathentry kind="var" path="M2_REPO/ch/qos/logback/logback-core/1.0.13/logback-core-1.0.13.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/commons/commons-lang3/3.3.2/commons-lang3-3.3.2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/xerces/xercesImpl/2.11.0/xercesImpl-2.11.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/xml-apis/xml-apis/1.4.01/xml-apis-1.4.01.jar"/>
-  <classpathentry kind="var" path="M2_REPO/jaxen/jaxen/1.1.4/jaxen-1.1.4.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/jdom/jdom/1.1.3/jdom-1.1.3.jar"/>
-  <classpathentry kind="var" path="M2_REPO/urbanophile/java-getopt/1.0.9/java-getopt-1.0.9.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-core/2.0.8/maven-core-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-settings/2.0.8/maven-settings-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-model/2.0.8/maven-model-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/codehaus/plexus/plexus-utils/2.0.2/plexus-utils-2.0.2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/codehaus/plexus/plexus-container-default/1.0-alpha-9-stable-1/plexus-container-default-1.0-alpha-9-stable-1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/classworlds/classworlds/1.1/classworlds-1.1.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/wagon/wagon-file/1.0-beta-2/wagon-file-1.0-beta-2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/wagon/wagon-provider-api/1.0-beta-2/wagon-provider-api-1.0-beta-2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-plugin-parameter-documenter/2.0.8/maven-plugin-parameter-documenter-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/wagon/wagon-http-lightweight/1.0-beta-2/wagon-http-lightweight-1.0-beta-2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/wagon/wagon-http-shared/1.0-beta-2/wagon-http-shared-1.0-beta-2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/jtidy/jtidy/4aug2000r7-dev/jtidy-4aug2000r7-dev.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/reporting/maven-reporting-api/2.0.8/maven-reporting-api-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/doxia/doxia-sink-api/1.0-alpha-9/doxia-sink-api-1.0-alpha-9.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-profile/2.0.8/maven-profile-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-artifact/2.0.8/maven-artifact-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-repository-metadata/2.0.8/maven-repository-metadata-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-error-diagnostics/2.0.8/maven-error-diagnostics-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-project/2.0.8/maven-project-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-artifact-manager/2.0.8/maven-artifact-manager-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-plugin-registry/2.0.8/maven-plugin-registry-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-cli/commons-cli/1.0/commons-cli-1.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-plugin-api/2.0.8/maven-plugin-api-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/wagon/wagon-ssh-external/1.0-beta-2/wagon-ssh-external-1.0-beta-2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/wagon/wagon-ssh-common/1.0-beta-2/wagon-ssh-common-1.0-beta-2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/codehaus/plexus/plexus-interactivity-api/1.0-alpha-4/plexus-interactivity-api-1.0-alpha-4.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-plugin-descriptor/2.0.8/maven-plugin-descriptor-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/maven-monitor/2.0.8/maven-monitor-2.0.8.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/wagon/wagon-ssh/1.0-beta-2/wagon-ssh-1.0-beta-2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/com/jcraft/jsch/0.1.27/jsch-0.1.27.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/reporting/maven-reporting-impl/2.0.4.2/maven-reporting-impl-2.0.4.2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-validator/commons-validator/1.2.0/commons-validator-1.2.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-beanutils/commons-beanutils/1.7.0/commons-beanutils-1.7.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.0.4/commons-logging-1.0.4.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-digester/commons-digester/1.6/commons-digester-1.6.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-collections/commons-collections/3.2/commons-collections-3.2.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/doxia/doxia-core/1.0/doxia-core-1.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/doxia/doxia-site-renderer/1.0/doxia-site-renderer-1.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/codehaus/plexus/plexus-i18n/1.0-beta-7/plexus-i18n-1.0-beta-7.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/codehaus/plexus/plexus-velocity/1.1.7/plexus-velocity-1.1.7.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/velocity/velocity/1.5/velocity-1.5.jar"/>
-  <classpathentry kind="var" path="M2_REPO/commons-lang/commons-lang/2.4/commons-lang-2.4.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/doxia/doxia-decoration-model/1.0/doxia-decoration-model-1.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/doxia/doxia-module-apt/1.0/doxia-module-apt-1.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/doxia/doxia-module-fml/1.0/doxia-module-fml-1.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/doxia/doxia-module-xdoc/1.0/doxia-module-xdoc-1.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/doxia/doxia-module-xhtml/1.0/doxia-module-xhtml-1.0.jar"/>
-  <classpathentry kind="var" path="M2_REPO/org/apache/maven/shared/maven-invoker/2.0.11/maven-invoker-2.0.11.jar"/>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.8">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
 </classpath>
