@@ -19,7 +19,7 @@ public class WebDriverSimpleTest {
         // Let's go look at O'Reilly books
         driver.get("http://www.oreilly.com/");
 
-        // Find the search box textfield
+        // Find search box textfield (e.g., see line 436 in this page's View Source as of early 2016)
         WebElement element = driver.findElement(By.name("q"));
 
         // Enter an ISBN to search for
