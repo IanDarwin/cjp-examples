@@ -2,14 +2,14 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.darwinsys</groupId>
-	<artifactId>XXXXX</artifactId>
+	<artifactId>cjp-web-demos</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<inceptionYear>2007</inceptionYear>
+	<inceptionYear>2016</inceptionYear>
 
-	<name>XXXXX</name>
+	<name>web</name>
 	<description>
-		XXXXX 
+		web 
 	</description>
 	<url>http://darwinsys.com/</url>
 	<licenses>
@@ -46,8 +46,10 @@
 		</dependency>
 	</dependencies>
 
+	<build>
 	<plugins>
 		<!-- None yet -->
 	</plugins>
+	</build>
 
 </project>
