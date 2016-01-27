@@ -2,19 +2,33 @@ package demo;
 
 import static org.junit.Assert.assertTrue;
 
+import java.io.File;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class WebDriverSimpleTest {
 
+	public final String SCREENSHOT_SAVE_NAME = "/tmp/screenshot.png";
+	
+	private static WebDriver driver;
+	
+	@BeforeClass
+	public static void setupDriver() {
+		//driver = new HtmlUnitDriver();
+		driver = new FirefoxDriver();
+		// others...
+	}
+
 	@Test
 	public void testSearchBox() {
-        WebDriver driver;
-        driver = new HtmlUnitDriver();
-        //driver = new FirefoxDriver();
 
         // Let's go look at O'Reilly books
         driver.get("http://www.oreilly.com/");
@@ -37,7 +51,21 @@ public class WebDriverSimpleTest {
 
         // Verify the search results
 		assertTrue("found", driver.getPageSource().contains("Java Cookbook"));
-
+		
+		if (driver instanceof TakesScreenshot) {
+			File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+			boolean renamed = screenshot.renameTo(new File(SCREENSHOT_SAVE_NAME));
+			assertTrue("Moved screenshot to " + SCREENSHOT_SAVE_NAME, renamed);
+			System.out.println("Screenshot saved as " + SCREENSHOT_SAVE_NAME);
+		} else {
+			System.out.println("Driver does not implement " + TakesScreenshot.class.getName());
+		}
+	}
+	
+	// Other test methods here would share the Driver instance...
+	
+	@AfterClass
+	public static void closeDriver() {
 		// All done
         driver.quit();
 	}
