@@ -1,0 +1,19 @@
+<project default="all">
+
+	<taskdef resource="webtestTaskdefs.properties" />
+  
+	<target name="all" >
+		<antcall target="searchtest"/>
+	</target>
+
+	<target name="searchtest">
+		<webtest name="Check that O'Reilly has my book listed">
+			<invoke url="http://oreilly.com/" description="Go to O'Reilly Home"/>
+			<verifyTitle text="O'Reilly" />
+			<setInputField name="q" value="0636920026518" />
+			<clickButton label="SEARCH" />
+			<verifyTitle text="O'Reilly Search" />
+			<verifyText test="Java Cookbook" />
+		</webtest>
+	</target>
+</project>

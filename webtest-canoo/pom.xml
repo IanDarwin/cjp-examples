@@ -27,6 +27,7 @@
 					<haltonfailure>false</haltonfailure>
 					<haltonerror>false</haltonerror>
 					<loglevel>warn</loglevel>
+					<!-- <reportdirectory>${basedir}/target/site/webtest</reportdirectory> -->
 				</configuration>
 			</plugin>
 		</plugins>

@@ -1,15 +1,9 @@
-<project default="all">
+<?xml version="1.0" encoding="ISO-8859-1"?>
 
-	<taskdef resource="webtestTaskdefs.properties" />
-  
-	<target name="all">
-		<webtest name="Check that O'Reilly has my book listed">
-			<invoke url="http://oreilly.com/" description="Go to O'Reilly Home"/>
-			<verifyTitle text="O'Reilly" />
-			<setInputField name="q" value="0636920026518" />
-			<clickButton label="SEARCH" />
-			<verifyTitle text="O'Reilly Search" />
-			<verifyText test="Java Cookbook" />
-		</webtest>
-	</target>
+<project name="Master Test File" basedir="." default="all">
+
+  <target name="all" >
+    <ant antfile="search.xml" dir="."/>
+  </target>
+
 </project>
