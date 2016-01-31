@@ -9,7 +9,7 @@ import com.gargoylesoftware.htmlunit.WebClientOptions;
 import com.gargoylesoftware.htmlunit.html.HtmlInput;
 import com.gargoylesoftware.htmlunit.html.HtmlPage;
 
-public class HtmlUnitDemo {
+public class HtmlUnitDemoTest {
 
 	@Test
 	public void pageTest() throws Exception {
