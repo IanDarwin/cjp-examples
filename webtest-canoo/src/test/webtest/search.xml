@@ -13,7 +13,7 @@
 			<setInputField name="q" value="0636920026518" />
 			<clickButton label="SEARCH" />
 			<verifyTitle text="O'Reilly Search" />
-			<verifyText test="Java Cookbook" />
+			<verifyText text="Java Cookbook" />
 		</webtest>
 	</target>
 </project>
