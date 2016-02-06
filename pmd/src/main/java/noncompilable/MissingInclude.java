@@ -1,4 +1,4 @@
-package fred;
+package noncompilable;
 
 import a.b.c.d.e.Fred;	// Fred does not exist so this won't compile
 
