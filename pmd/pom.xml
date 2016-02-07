@@ -35,6 +35,8 @@
 		<maven.compiler.target>${javase.version}</maven.compiler.target>
 		<maven.compiler.testSource>${javase.version}</maven.compiler.testSource>
 		<maven.compiler.testTarget>${javase.version}</maven.compiler.testTarget>
+		<maven.compiler.version>3.5</maven.compiler.version>
+		<maven.pmd.version>3.6</maven.pmd.version>
 		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 	</properties>
 
@@ -42,8 +44,18 @@
 		<plugins>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>${maven.compiler.version}</version>
+				<configuration>
+					<excludes>
+						<exclude>noncompilable/*.java</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-pmd-plugin</artifactId>
-				<version>3.6</version>
+				<version>${maven.pmd.version}</version>
 				<configuration>
 					<linkXRef>true</linkXRef>
 					<minimumTokens>30</minimumTokens>
@@ -51,6 +63,7 @@
 						<ruleset>/rulesets/java/unusedcode.xml</ruleset>
 						<ruleset>/rulesets/java/naming.xml</ruleset>
 					</rulesets>
+					<targetJdk>1.8</targetJdk>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -58,6 +71,15 @@
 
 	<reporting>
 		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-pmd-plugin</artifactId>
+				<version>${maven.pmd.version}</version>
+				<configuration>
+					<linkXRef>true</linkXRef>
+					<minimumTokens>30</minimumTokens>
+				</configuration>
+			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-jxr-plugin</artifactId>
@@ -88,6 +110,7 @@
 			<groupId>org.hamcrest</groupId>
 			<artifactId>java-hamcrest</artifactId>
 			<version>2.0.0.0</version>
+			<scope>test</scope>
 		</dependency>
 		
 	</dependencies>
