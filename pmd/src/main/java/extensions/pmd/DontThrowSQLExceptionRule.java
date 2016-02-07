@@ -1,5 +1,6 @@
 package extensions.pmd;
 
+import java.sql.SQLException;
 import java.util.List;
 
 import net.sourceforge.pmd.lang.rule.AbstractRule;
@@ -15,11 +16,12 @@ public class DontThrowSQLExceptionRule extends AbstractRule {
 				for (int j = 0; j < node.jjtGetNumChildren(); j++) {
 					final Node nameListElement = node.jjtGetChild(j);
 					System.out.printf("Namelist element %s%n", nameListElement);
+					if (nameListElement.hasDescendantOfType(SQLException.class)) {
+						addViolation(ctx, node);	// note: reversed order from visit()
+						return;						// only need one occurrence
+					}
 				}
 			}
 		}
-		// if (nameList contains SQLException) {
-		//	addViolation(data, node);	// note: reversed order from visit()
-		// }
 	}
 }
