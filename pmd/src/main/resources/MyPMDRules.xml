@@ -1,15 +1,14 @@
 <?xml version="1.0"?>
 <ruleset name="Ian's PMD rules"
-	xmlns="http://pmd.sf.net/ruleset/1.0.0"
+	xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
-	xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+	 xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
 
 	<description>This is a set of demonstration rules to accompany "Checking Java Programs".
 	</description>
 
-	<rule name="DontThrowSQLExceptionXML"
-		class="net.sourceforge.pmd.rules.XPathRule"
+	<rule name="DontThrowSQLExceptionXML" language="java"
+		class="net.sourceforge.pmd.lang.rule.XPathRule"
 		message="XML Rule: SQL Exceptions should be wrapped in DataBaseException">
 		<description>
 			SQL Exceptions are checked Exceptions and force needless
