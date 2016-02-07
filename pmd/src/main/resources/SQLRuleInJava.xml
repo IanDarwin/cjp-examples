@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<ruleset name="Ian's PMD rules"
+	xmlns="http://pmd.sourceforge.net/ruleset/2.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xsi:schemaLocation="http://pmd.sourceforge.net/ruleset/2.0.0 http://pmd.sourceforge.net/ruleset_2_0_0.xsd">
+
+	<description>This is a demonstration rule to accompany "Checking Java Programs".
+	</description>
+
+	<rule name="DontThrowSQLExceptionJava" language="java"
+		class="extensions.pmd.DontThrowSQLExceptionRule"
+		message="Java Rule: SQL Exceptions should be wrapped in DataBaseException">
+		<description>
+			SQL Exceptions are checked Exceptions and force needless
+			try/catch or throws overhead on client code; these should be
+			wrapped in DataBaseException or a similar unchecked
+			Exception (RuntimeException subclass).
+		</description>
+		<example>
+			<![CDATA[
+public abstract class Foo {
+	public String getCustomerName() throws SQLException {...}
+	public String getCustomerStreetAddr() throws SQLException {...}
+}
+		]]>
+		</example>
+		<priority>3</priority>
+		<properties/>
+	</rule>
+
+</ruleset>
