@@ -1,4 +1,4 @@
-package intro;
+package examples;
 
 import java.io.*;
 import java.awt.event.*;
