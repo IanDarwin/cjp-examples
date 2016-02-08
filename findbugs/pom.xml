@@ -70,7 +70,7 @@
 				<artifactId>findbugs-maven-plugin</artifactId>
 				<version>3.0.1</version>
 				<configuration>
-					<output>text</output>
+					<xmlOutput>false</xmlOutput>
 				</configuration>
 			</plugin>
 		</plugins>
