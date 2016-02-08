@@ -32,6 +32,7 @@ public class CopiedCodeExample {
 	 * Absolutely only useful as an example of CPD
 	 */
 	public static void main(String[] args) {
+		System.out.println("CopiedCodeExample.main()");
 		new CopiedCodeExample("Tom", "123 Main St", "555-1212")
 			.convert();
 	}
