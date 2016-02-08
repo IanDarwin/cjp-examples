@@ -40,14 +40,6 @@
 
 	<dependencies>
 
-		<!-- FINDBUGS -->
-		<dependency>
-			<groupId>org.codehaus.mojo</groupId>
-			<artifactId>findbugs-maven-plugin</artifactId>
-			<version>3.0.1</version>
-			<type>maven-plugin</type>
-		</dependency>
-
 		<!-- JUNIT -->
 		<dependency>
 			<groupId>junit</groupId>
@@ -64,5 +56,14 @@
 
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>findbugs-maven-plugin</artifactId>
+				<version>3.0.1</version>
+			</plugin>
+		</plugins>
+	</build>
 
 </project>
