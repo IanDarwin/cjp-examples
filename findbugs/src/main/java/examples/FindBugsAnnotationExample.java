@@ -1,10 +1,10 @@
 package examples;
 
-import edu.umd.cs.findbugs.annotations.CheckReturnValue;
+import javax.annotation.CheckReturnValue;
 
 public class FindBugsAnnotationExample {
 
-	@CheckReturnValue(explanation="Friends don't greet friends with 'null'")
+	@CheckReturnValue(/*"Friends don't greet friends with 'null'"*/)
 	public static String getGreeting() {
 		if (System.currentTimeMillis() % 12 == 0)
 			return null;
