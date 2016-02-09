@@ -1,16 +1,23 @@
 package examples;
 
-import java.io.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.File;
+import java.io.IOException;
+
+import javax.swing.JButton;
+import javax.swing.JFileChooser;
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
 
 /**
  * WARNING - this class has some deliberate errors in it.
  * DO NOT clean up this file, or you will break the error detection examples!
  */
 public class Action {
-	JFrame theFrame;
+	JFrame theFrame = new JFrame("Test");
 	JFileChooser chooser;
+	JButton theButton;
 	String fileName;
 	boolean doingSaveAs;
 
@@ -54,5 +61,14 @@ public class Action {
 
 	void exit() {
 		System.exit(0);
+	}
+	
+	void thisShouldGiveWarning() {
+		theButton.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				System.exit(0);			// This may give a warning
+			}
+		});
 	}
 }

@@ -2,6 +2,6 @@
 	<!-- Ignore Dm errors in inner class of demo.SwingAppDemo -->
 	<Match>
 		<Bug code="Dm"/>
-		<Class name="examples.SwingAppDemo$1"/>
+		<Class name="examples.Action$1"/>
 	</Match>
 </FindBugsFilter>
