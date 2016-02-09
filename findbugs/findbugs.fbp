@@ -1,0 +1,4 @@
+<Project projectName="FindbugsDemo">
+  <Jar>./target/classes</Jar>
+  <SrcDir>./src/main/java</SrcDir>
+</Project>
