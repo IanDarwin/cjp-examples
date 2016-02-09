@@ -1,10 +1,11 @@
 package examples;
 
 import javax.annotation.CheckReturnValue;
+import javax.annotation.meta.When;
 
 public class FindBugsAnnotationExample {
 
-	@CheckReturnValue(/*"Friends don't greet friends with 'null'"*/)
+	@CheckReturnValue(when=When.ALWAYS /*"Friends don't greet friends with 'null'"*/)
 	public static String getGreeting() {
 		if (System.currentTimeMillis() % 12 == 0)
 			return null;
