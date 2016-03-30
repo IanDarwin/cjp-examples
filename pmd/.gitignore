@@ -2,3 +2,5 @@ target
 pmd-ant-results.txt
 reports
 .pmd
+.eclipse-pmd
+.ruleset
