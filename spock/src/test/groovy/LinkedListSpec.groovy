@@ -1,7 +1,7 @@
 import spock.lang.*
 import java.util.*
 
-class LinkListSpec extends Specification {
+class LinkedListSpec extends Specification {
   @Shared def target = null
   def setup() {
 	target = new LinkedList();
