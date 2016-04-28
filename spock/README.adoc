@@ -9,4 +9,7 @@ you have to edit it and un-comment the indicated line.
 
 *N.B.* The database test will probably only work with my database setup.
 You probably need to change the database JDBC parameters near the top
-of this file in order for it to work for you.
+of this file in order for it to work for you. I used 
+http://postgresql.org[PostgreSQL]; if you already have that you can use
+`text/minimal-db.sql` to set up a database; if not, use that as a guide
+with whatever database product you like.
