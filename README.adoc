@@ -34,11 +34,11 @@ but since the repositories themselves are no longer available, it is probably po
 
 == Attention Users of the 2007 Book Version
 
-The head commit of the master branch  will be totally broken if you try to follow
+The head commit of the master branch  will be totally wrong for you if you try to follow
 the directions in the 2007 edition of the book. If you still want to follow a
 decade-old book you should only have to do `git checkout a1ad04` after cloning the git repo.
 
-When you install it YOU WILL HAVE TO SET some Eclipse variables
+When you install that version YOU WILL HAVE TO SET some Eclipse variables
 before it will work! This is expected. Emails asking why it doesn't
 work out of the box when you haven't read this file are probably going
 to be ignored, but you won't know that if you didn't read
@@ -47,10 +47,12 @@ The details are in the 2007 book.
 
 == Contact
 
-Thanks for reading/watching _Checking Java Programs_!
+Thanks for reading/watching my book and/or my video series.
 
 Ian Darwin
 
 http://cjp.darwinsys.com/[Book website]
+
+http://shop.oreilly.com/product/0636920042723.do[Java Testing for Developers], videocast Learning Path
 
 http://shop.oreilly.com/product/9780596510237.do[Order the 2007 book from O'Reilly]
