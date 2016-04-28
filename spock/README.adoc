@@ -1,6 +1,6 @@
 == Spock Demos
 
-Spock is a nice new testing fraework that leverages JUnit tooling.
+Spock is a nice new testing framework that leverages JUnit tooling.
 http://spockframework.org/ is their home base.
 
 *N.B.* The FailureDemo.groovy script is supposed to show failure.
