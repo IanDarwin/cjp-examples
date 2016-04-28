@@ -1,0 +1,12 @@
+== Spock Demos
+
+Spock is a nice new testing fraework that leverages JUnit tooling.
+http://spockframework.org/ is their home base.
+
+*N.B.* The FailureDemo.groovy script is supposed to show failure.
+However, to ensure that tests pass "out of the box", it's disabled;
+you have to edit it and un-comment the indicated line.
+
+*N.B.* The database test will probably only work with my database setup.
+You probably need to change the database JDBC parameters near the top
+of this file in order for it to work for you.
