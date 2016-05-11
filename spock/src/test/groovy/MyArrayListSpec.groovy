@@ -1,7 +1,7 @@
 import spock.lang.*;
 
 class MyArrayListSpec extends Specification {
-    @Shared myArrayList = new ArrayList();
+    def myArrayList = new ArrayList();
     def "ArrayList clear works"() {
 		given: "The user adds something to a List"
 			myArrayList.add("some value")
