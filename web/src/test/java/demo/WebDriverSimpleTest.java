@@ -95,6 +95,7 @@ public class WebDriverSimpleTest {
 	@AfterClass
 	public static void closeDriver() {
 		// All done
-        driver.quit();
+		if (driver != null)
+			driver.quit();
 	}
 }
