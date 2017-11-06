@@ -13,22 +13,46 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
-// import org.openqa.selenium.firefox.FirefoxDriver;
-// import org.openqa.selenium.htmlunit.HtmlUnitDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.htmlunit.HtmlUnitDriver;
 
 public class WebDriverSimpleTest {
 
+	final static String CHROMEDRIVER_PATH_KEY = "webdriver.chrome.driver";
+	final static String CHROMEDRIVER_DEFAULT_PATH = 
+		"/usr/local/bin/chromedriver";
+
 	public final String SCREENSHOT_SAVE_NAME = "/tmp/screenshot.png";
-	
+
+	enum DriverType { CHROME, FIREFOX, HTMLUNIT };
 	private static WebDriver driver;
-	
+
 	@BeforeClass
 	public static void setupDriver() {
-		System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
-		driver = new ChromeDriver();
-		// driver = new HtmlUnitDriver();
-		// driver = new FirefoxDriver();
-		// others...
+		String driverProperty = System.getProperty("DRIVER");
+		DriverType driverType;
+		if (driverProperty == null)
+			driverType = DriverType.CHROME;
+		else
+			driverType = DriverType.valueOf(driverProperty.toUpperCase());
+		switch(driverType) {
+		case CHROME:
+			if (System.getProperty(CHROMEDRIVER_PATH_KEY) == null) {
+				System.setProperty("webdriver.chrome.driver", 
+					CHROMEDRIVER_DEFAULT_PATH);
+			}
+			driver = new ChromeDriver();
+			break;
+		case FIREFOX:
+			driver = new FirefoxDriver();
+			break;
+		case HTMLUNIT:
+			driver = new HtmlUnitDriver();
+			break;
+		default:
+			throw new IllegalArgumentException(driverProperty);
+		}
+		System.out.println("Using WebDriver: " + driver);
 	}
 
 	@Test
