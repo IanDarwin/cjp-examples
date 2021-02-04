@@ -26,25 +26,8 @@
 		</developer>
 	</developers>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<javase.version>1.8</javase.version>
-		<webdriver.version>2.50.0</webdriver.version>
-		<maven.compiler.source>${javase.version}</maven.compiler.source>
-		<maven.compiler.target>${javase.version}</maven.compiler.target>
-		<maven.compiler.testSource>${javase.version}</maven.compiler.testSource>
-		<maven.compiler.testTarget>${javase.version}</maven.compiler.testTarget>
-		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
-	</properties>
-
 	<dependencies>
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.11</version>
-			<scope>test</scope>
-		</dependency>
+		<!-- JUnit 4.x is in parent pom -->
 
 		<!-- Selenium WebDriver -->
 		<dependency>

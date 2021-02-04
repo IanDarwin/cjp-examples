@@ -1,6 +1,12 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
+	<parent>
+		<groupId>com.darwinsys.cjp</groupId>
+		<artifactId>group-parent</artifactId>
+		<version>1.0.1-SNAPSHOT</version>
+	</parent>
+
 	<groupId>com.darwinsys.cjp</groupId>
 	<artifactId>cjp-static</artifactId>
 	<version>2.0.0-SNAPSHOT</version>
@@ -27,26 +33,9 @@
 		</developer>
 	</developers>
 
-	<properties>
-		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<javase.version>1.8</javase.version>
-		<maven.compiler.source>${javase.version}</maven.compiler.source>
-		<maven.compiler.target>${javase.version}</maven.compiler.target>
-		<maven.compiler.testSource>${javase.version}</maven.compiler.testSource>
-		<maven.compiler.testTarget>${javase.version}</maven.compiler.testTarget>
-		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
-	</properties>
-
 	<dependencies>
 
-		<!-- JUNIT -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.12</version>
-			<scope>test</scope>
-		</dependency>
+		<!-- JUnit 4.x is in parent pom -->
 
 		<!-- Hamcrest -->
 		<dependency>
