@@ -1,15 +1,17 @@
 == Spock Demos
 
-Spock is a nice new testing framework that leverages JUnit tooling.
+Spock is a nice testing framework that leverages JUnit tooling.
 http://spockframework.org/ is their home base.
 
 *N.B.* The FailureDemo.groovy script is supposed to show failure.
 However, to ensure that tests pass "out of the box", it's disabled;
 you have to edit it and un-comment the indicated line.
 
-*N.B.* The database test will probably only work with my database setup.
-You probably need to change the database JDBC parameters near the top
-of this file in order for it to work for you. I used 
-http://postgresql.org[PostgreSQL]; if you already have that you can use
-`text/minimal-db.sql` to set up a database; if not, use that as a guide
-with whatever database product you like.
+The DatabaseSpec test uses an in-memory database. If you want to use
+a real database (not sure why you would, as this is supposed to be a unit test),
+you can try to use `text/minimal-db.sql` to set up a database. 
+This was written for PostgreSQL and will need to be adapted
+to whatever database product you like, AND:
+
+* adjust the definition of 'sql' in the test;
+* comment out the call to "setupData()" in the test.
