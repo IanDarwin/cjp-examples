@@ -17,7 +17,6 @@
 
   <properties>
 		<build.plugins.plugin.version>1.0.1</build.plugins.plugin.version>
-		<webdriver.version>2.50.0</webdriver.version>
   </properties>
 
   <dependencies>
