@@ -18,6 +18,7 @@
 		<javaee.version>8.0</javaee.version>
 		<junit.version>[4.13.1,)</junit.version>
 		<darwinsys-api.version>1.5.14</darwinsys-api.version>
+		<webdriver.version>2.50.0</webdriver.version>
 		<maven.compiler.source>${javase.version}</maven.compiler.source>
 		<maven.compiler.target>${javase.version}</maven.compiler.target>
 		<maven.compiler.testSource>${javase.version}</maven.compiler.testSource>
@@ -37,7 +38,8 @@
 		<module>pmd</module>
 		<!-- <module>jpf</module> -->
 		<!-- <module>database</module> -->
-		<!-- <module>webdriver</module> -->
+		<!-- <module>web</module> -->
+		<!-- <module>webtest-canoo</module> -->
     </modules>
 
 	<!-- JUnit defined here so all get access to it. -->
