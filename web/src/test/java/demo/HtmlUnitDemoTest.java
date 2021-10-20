@@ -25,7 +25,7 @@ public class HtmlUnitDemoTest {
 	        // Fill in form and click "Search" button/link
 	        HtmlInput searchBox = page.getElementByName("q");
 	        // System.out.println(searchBox);
-	        searchBox.setValueAttribute("0636920026518");
+	        searchBox.setValueAttribute("9781492072583");
 	        // The image-button we want to click has no ID or Name but is inside a div with this id:
 	        HtmlInput searchButton = 
 	        (HtmlInput) page.getElementById("search-button").getChildNodes().get(0);

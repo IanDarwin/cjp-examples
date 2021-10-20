@@ -66,7 +66,7 @@ public class WebDriverSimpleTest {
 
         // Enter an ISBN to search for
         element.clear(); // In case search box has a Prototype
-        element.sendKeys("0636920026518");
+        element.sendKeys("9781492072583");
 
         // When we ask to submit the element, WebDriver will find the 
         // nearest enclosing <form...> element and submit that instead.
