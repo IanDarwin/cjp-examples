@@ -7,6 +7,12 @@ Classpath is also the reason I chose to split this repo into
 *multiple projects*, each an Eclipse project and a Maven-buildable project.
 Otherwise the classpath (and the Maven pom file) would become overly large.
 
+This repo has been used for:
+
+* The 2007 book Checking Java Programs;
+* The 2015 Video Series.
+* The 2022 book Checking Java Programs.
+
 Not everything builds or runs at the moment: patches welcome; complaints, not so much.
 A few parts of this will indeed likely stay on Ant because
 one or two of the tools are only available as Ant plugins.
@@ -14,23 +20,23 @@ While I do know about the maven-ant-plugin, it's still just easier this way.
 
 There are several main directories:
 
-. _general_ is the catch-all containing most demos for JUnit, PMD, Findbugs and JPF;
+. _general_ is the catch-all containing various demos
 . _spock_ contains the Spock examples;
-. _junit5_ contains forward-looking statements about the next release of JUnit.
+. _junit4_ contains JUnit 4 examples
+. _junit5_ contains JUnit 5 examples
 . _pmd_ contains some examples of PMD
-. _findbugs_ contains some examples of FindBugs
-. _jpf_ - not maintained, contains JPF examples from 2007, using Ant.
+. _spotbugs_ contains some examples of SpotBugs, the follow-on project to FindBugs
+. _jpf_ - not yet updated, contains Java PathFinder examples
 
-== The Sad Tale of JPF
+== JPF: Java PathFinder
 
 JavaPathFinder (JPF) is a really nice set of tools for examine state modelling of your Java code.
 It was created at NASA to verify the software used in the Mars Rover control program 
 (not the embedded software in the device, but the ground-based controller software).
 Unfortunately, it has never been easy to get started with, nor has it made the leap from
-Ant to Maven - although a third-party project set up Maven repositories, these have become
-lost in the sands of time. There is a jpf-maven-plugin project which you can find and build,
-but since the repositories themselves are no longer available, it is probably pointless.
-"Look on my works, ye mighty, and despair..."
+Ant to Maven.
+JPF seemed for a while like _abandonware_, but has been revived and is being modernized
+and even expanded.
 
 == Attention Users of the 2007 Book Version
 
