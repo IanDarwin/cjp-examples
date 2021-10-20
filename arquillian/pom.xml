@@ -15,7 +15,7 @@
 	<packaging>jar</packaging>
 	<inceptionYear>2015</inceptionYear>
 
-	<name>cjp-arquillian</name>
+	<name>Checking Java Programs - Arquillian examples</name>
 	<url>http://cjp.darwinsys.com/</url>
 
 	<dependencyManagement>

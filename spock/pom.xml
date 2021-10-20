@@ -9,11 +9,13 @@
 		<version>1.0.1-SNAPSHOT</version>
 	</parent>
 
-  <groupId>com.darwinsys.cjp</groupId>
-  <artifactId>cjp-spock</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
-  <packaging>jar</packaging>
-  <inceptionYear>2015</inceptionYear>
+	<groupId>com.darwinsys.cjp</groupId>
+	<artifactId>cjp-spock</artifactId>
+	<version>1.0.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<inceptionYear>2015</inceptionYear>
+
+	<name>Checking Java Programs - Spock examples</name>
 
   <properties>
 		<build.plugins.plugin.version>1.0.1</build.plugins.plugin.version>
