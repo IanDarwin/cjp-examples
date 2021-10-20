@@ -31,7 +31,7 @@
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<javase.version>1.8</javase.version>
-		<junit-version>5.0.0-SNAPSHOT</junit-version>
+		<junit-version>5.7.1</junit-version>
 		<maven.compiler.source>${javase.version}</maven.compiler.source>
 		<maven.compiler.target>${javase.version}</maven.compiler.target>
 		<maven.compiler.testSource>${javase.version}</maven.compiler.testSource>
@@ -39,52 +39,19 @@
 		<maven.javadoc.failOnError>false</maven.javadoc.failOnError>
 	</properties>
 
-	<!-- This is all pre-production code, so pull JUnit & friends from snapshot repo. -->
-	<repositories>
-		<repository>
-			<id>snapshots-repo</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-			<releases>
-				<enabled>false</enabled>
-			</releases>
-			<snapshots>
-				<!-- Do NOT cache JUnit 5 snapshot JARs. -->
-				<updatePolicy>always</updatePolicy>
-				<enabled>true</enabled>
-			</snapshots>
-		</repository>
-	</repositories>
-
-	<pluginRepositories>
-		<pluginRepository>
-			<id>snapshots-repo</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</pluginRepository>
-	</pluginRepositories>
-
-	<build>
-		<plugins>
-			<plugin>
-				<artifactId>maven-surefire-plugin</artifactId>
-				<version>2.19</version>
-				<dependencies>
-					<dependency>
-						<groupId>org.junit.prototype</groupId>
-						<artifactId>surefire-junit5</artifactId>
-						<version>${junit-version}</version>
-					</dependency>
-				</dependencies>
-			</plugin>
-		</plugins>
-	</build>
-
 	<dependencies>
 
 		<!-- JUNIT -->
 		<dependency>
-			<groupId>org.junit.prototype</groupId>
-			<artifactId>junit5-api</artifactId>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-api</artifactId>
 			<version>${junit-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit-version}</version>
+			<scope>test</scope>
 		</dependency>
 
 	</dependencies>

@@ -1,12 +1,12 @@
 package demo;
 
-import static org.junit.gen5.api.Assertions.assertEquals;
-import static org.junit.gen5.api.Assertions.expectThrows;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 
-import org.junit.gen5.api.AfterAll;
-import org.junit.gen5.api.BeforeAll;
-import org.junit.gen5.api.BeforeEach;
-import org.junit.gen5.api.Test;
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
  * Demonstrate JUnit5's approach.
@@ -43,7 +43,7 @@ public class DecorTest {
 
 	@Test
 	public void testInvalidTheme() {
-		Exception exception = expectThrows(
+		Exception exception = assertThrows(
 			IllegalArgumentException.class,
 			() -> { decorator.decorate("Decorate this", "MyNotWrittenYetTheme"); });
 		System.out.println("Exception was " + exception);
