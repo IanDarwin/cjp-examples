@@ -14,7 +14,7 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-		<javase.version>11</javase.version>
+		<javase.version>1.8</javase.version>
 		<javaee.version>8.0</javaee.version>
 		<junit4.version>[4.13.1,)</junit4.version>
 		<darwinsys-api.version>1.5.14</darwinsys-api.version>
