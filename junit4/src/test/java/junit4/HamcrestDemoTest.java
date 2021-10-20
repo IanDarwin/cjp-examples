@@ -1,4 +1,4 @@
-package examples.junit;
+package junit4;
 
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.containsString;
