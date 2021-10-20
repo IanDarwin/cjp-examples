@@ -7,16 +7,20 @@ Classpath is also the reason I chose to split this repo into
 *multiple projects*, each an Eclipse project and a Maven-buildable project.
 Otherwise the classpath (and the Maven pom file) would become overly large.
 
-This repo has been used for:
+This repo has been used as examples in:
 
 * The 2007 book Checking Java Programs;
 * The 2015 Video Series.
-* The 2022 book Checking Java Programs.
+* The forthcoming 2022 book Checking Java Programs.
 
-Not everything builds or runs at the moment: patches welcome; complaints, not so much.
+Everything that is enabled as a module builds and passes its tests;
+the other modules do not pass at the moment: patches welcome; complaints, not so much.
 A few parts of this will indeed likely stay on Ant because
 one or two of the tools are only available as Ant plugins.
 While I do know about the maven-ant-plugin, it's still just easier this way.
+
+Note that at present the JDK level is set to 1.8 because the mocking libraries
+don't work on Java 11 because of the well-known restrictions on the Reflection API.
 
 There are several main directories:
 
