@@ -7,7 +7,6 @@
 		<version>1.0.1-SNAPSHOT</version>
 	</parent>
 
-	<groupId>com.darwinsys.cjp</groupId>
 	<artifactId>cjp-junit5</artifactId>
 	<packaging>jar</packaging>
 	<inceptionYear>2015</inceptionYear>

@@ -9,7 +9,7 @@ public class SqrtTest {
 	
 	@Test @Ignore
 	public void testSqrtBad() {
-		assertEquals("test sqrt", 1.414213562D, sqrt(2));
+		assertEquals("test sqrt", 1.414213562D, sqrt(2)); // EXPECT WARNING
 	}
 	
 	@Test
