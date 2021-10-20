@@ -10,7 +10,7 @@
 		<webtest name="Check that O'Reilly has my book listed">
 			<invoke url="http://oreilly.com/" description="Go to O'Reilly Home"/>
 			<verifyTitle text="O'Reilly" />
-			<setInputField name="q" value="0636920026518" />
+			<setInputField name="q" value="9781492072583" />
 			<clickButton label="SEARCH" />
 			<verifyTitle text="O'Reilly Search" />
 			<verifyText text="Java Cookbook" />
