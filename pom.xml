@@ -16,7 +16,7 @@
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
 		<javase.version>11</javase.version>
 		<javaee.version>8.0</javaee.version>
-		<junit.version>[4.13.1,)</junit.version>
+		<junit4.version>[4.13.1,)</junit4.version>
 		<darwinsys-api.version>1.5.14</darwinsys-api.version>
 		<webdriver.version>2.50.0</webdriver.version>
 		<maven.compiler.source>${javase.version}</maven.compiler.source>
@@ -31,6 +31,7 @@
 		<module>mockery</module>
 		<module>arquillian</module>
 		<module>cucumber</module>
+		<module>junit4</module>
 		<module>junit5</module>
 		<module>spock</module>
 		<module>coverage</module>
@@ -41,12 +42,12 @@
 		<!-- <module>webtest-canoo</module> -->
     </modules>
 
-	<!-- JUnit defined here so all get access to it. -->
+	<!-- JUnit 4 defined here so all get access to it. -->
 	<dependencies>
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>${junit.version}</version>
+			<version>${junit4.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

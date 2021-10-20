@@ -1,6 +1,0 @@
-#!/bin/sh
-
-cd /Users/ian/workspace/cjp-examples/
-rm -r */bin */target
-zip -r /tmp/cjp-examples.zip *
-mv /tmp/cjp-examples.zip /Users/ian/Dropbox/CheckingJavaPrograms/Movies/
