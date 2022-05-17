@@ -13,7 +13,7 @@
 	<packaging>jar</packaging>
 
 	<name>Canoo WebTest Demo</name>
-	<inceptionYear>2016</inceptionYear>
+	<description>Canoo web test examples from Ian's CJP book</description>
 
 	<build>
 		<plugins>

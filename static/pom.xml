@@ -15,23 +15,9 @@
 
 	<name>Checking Java Programs examples</name>
 	<description>
-		Examples from Ian's 2007 book Checking Java Programs,
+		Static checking examples from Ian's 2007 book Checking Java Programs,
 		updated for the 2015 video series of the same name.
 	</description>
-	<url>http://cjp.darwinsys.com/</url>
-	<licenses>
-		<license>
-		<name>BSD 2-Clause "New" or "Revised" license</name>
-		<url>http://opensource.org/licenses/BSD-2-Clause</url>
-		<distribution>repo</distribution>
-		</license>
-	</licenses>
-	<developers>
-		<developer>
-		<id>ian</id>
-		<name>Ian Darwin</name>
-		</developer>
-	</developers>
 
 	<dependencies>
 

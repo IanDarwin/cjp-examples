@@ -16,20 +16,6 @@
 	<description>
 		Measure the coverage of your test cases.
 	</description>
-	<url>http://darwinsys.com/cjp/</url>
-	<licenses>
-		<license>
-		<name>BSD 2-Clause "New" or "Revised" license</name>
-		<url>http://opensource.org/licenses/BSD-2-Clause</url>
-		<distribution>repo</distribution>
-		</license>
-	</licenses>
-	<developers>
-		<developer>
-		<id>ian</id>
-		<name>Ian Darwin</name>
-		</developer>
-	</developers>
 
 	<dependencies>
 		<!-- JUnit 4.x is in parent pom -->

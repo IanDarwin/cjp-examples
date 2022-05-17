@@ -16,7 +16,7 @@
 	<inceptionYear>2015</inceptionYear>
 
 	<name>Checking Java Programs - Arquillian examples</name>
-	<url>http://cjp.darwinsys.com/</url>
+	<description>Arquillian web examples</description>
 
 	<dependencyManagement>
 		<dependencies>
