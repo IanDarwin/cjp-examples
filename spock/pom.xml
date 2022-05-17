@@ -16,7 +16,7 @@
 	<inceptionYear>2015</inceptionYear>
 
 	<name>Checking Java Programs - Spock examples</name>
-	<description>Spock testing examples from CJP</descriotion>
+	<description>Spock testing examples from CJP</description>
 
   <dependencies>
     <!-- My own Java API potpourri, either installed locally, or on Central thanks to Sonatatype.org -->
