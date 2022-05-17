@@ -39,6 +39,7 @@ There are several main directories:
 . _pmd_ contains some examples of PMD
 . _spock_ contains the Spock examples;
 . _spotbugs_ contains some examples of SpotBugs, the follow-on project to FindBugs
+. _static_ - static code analysis.
 . _web_ - some general web tests
 . _webtest-canoo_ - the Canoo web test framework
 
