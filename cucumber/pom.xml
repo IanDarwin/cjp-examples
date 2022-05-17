@@ -33,11 +33,6 @@
 		</developer>
 	</developers>
 
-    <properties>
-        <cucumber.version>1.2.2</cucumber.version>
-        <maven.compiler.version>3.5</maven.compiler.version>
-    </properties>
-
     <dependencies>
         <dependency>
             <groupId>info.cukes</groupId>

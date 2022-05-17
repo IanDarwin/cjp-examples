@@ -38,6 +38,18 @@
 		</dependency>
 	</dependencies>
 
+	<build>
+		<plugins>
+			<plugin>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${plugin.surefire.version}</version>
+				<configuration>
+					<argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+
 	<profiles>
 		<profile>	
 			<activation>
@@ -48,26 +60,26 @@
 					<dependency>
 						<groupId>org.jboss.spec</groupId>
 						<artifactId>jboss-javaee-7.0</artifactId>
-						<version>1.0.0.Final</version>
+						<version>1.1.1.Final</version>
 						<type>pom</type>
 						<scope>provided</scope>
 					</dependency>
 					<dependency>
 						<groupId>org.jboss.arquillian.container</groupId>
 						<artifactId>arquillian-weld-ee-embedded-1.1</artifactId>
-						<version>1.0.0.CR5</version>
+						<version>1.0.0.Final</version>
 						<scope>test</scope>
 					</dependency>
 					<dependency>
 						<groupId>org.jboss.weld</groupId>
 						<artifactId>weld-core</artifactId>
-						<version>1.1.9.Final</version>
+						<version>3.0.0.Alpha6</version>
 						<scope>test</scope>
 					</dependency>
 					<dependency>
 						<groupId>org.slf4j</groupId>
 						<artifactId>slf4j-simple</artifactId>
-						<version>1.6.4</version>
+						<version>2.0.0-alpha7</version>
 						<scope>test</scope>
 					</dependency>
 				</dependencies>

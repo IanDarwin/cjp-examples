@@ -36,7 +36,7 @@
 		<dependency>
 			<groupId>com.h2database</groupId>
 			<artifactId>h2</artifactId>
-			<version>1.4.185</version>
+			<version>2.1.212</version>
 			<scope>test</scope>
 		</dependency>
 
@@ -52,13 +52,13 @@
 		<dependency>
 			<groupId>org.mockito</groupId>
 			<artifactId>mockito-all</artifactId>
-			<version>1.10.19</version>
+			<version>2.0.2-beta</version>
 			<scope>test</scope>
 		</dependency>
         <dependency>
             <groupId>org.powermock</groupId>
             <artifactId>powermock-api-mockito</artifactId>
-            <version>1.6.2</version>
+            <version>1.7.4</version>
             <scope>test</scope>
         </dependency>
         
@@ -70,4 +70,16 @@
 
 	</dependencies>
 
-</project>
+	<build>
+		<plugins>
+			<plugin>
+				<!-- PowerMock is way behind in update for Java>11 -->
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>${plugin.surefire.version}</version>
+				<configuration>
+					<argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	</project>
