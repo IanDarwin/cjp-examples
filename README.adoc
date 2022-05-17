@@ -45,6 +45,8 @@ There are several main directories:
 
 Of these, the current "broken" list is:
 jpf, spock, web, webtest.
+The arquillian folder has a race condition that only manifests on some platforms,
+and I've not yet tracked down if it's in my code or the framework.
 
 == JPF: Java PathFinder
 
