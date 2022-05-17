@@ -56,16 +56,16 @@
 
     <modules>
 		<module>general</module>
-		<module>mockery</module>
 		<module>arquillian</module>
+		<module>coverage</module>
 		<module>cucumber</module>
+		<!-- <module>jpf</module> -->
 		<module>junit4</module>
 		<module>junit5</module>
-		<!-- <module>spock</module> -->
-		<module>coverage</module>
-		<module>spotbugs</module>
+		<module>mockery</module>
 		<module>pmd</module>
-		<!-- <module>jpf</module> -->
+		<!-- <module>spock</module> -->
+		<module>spotbugs</module>
 		<!-- <module>web</module> -->
 		<!-- <module>webtest-canoo</module> -->
     </modules>
