@@ -31,6 +31,7 @@ There are several main directories:
 . _arquillian_ is a server-side web component tester from JBoss
 . _coverage_ shows test coverage using Cobertura
 . _cucumber_ shows a bit of the tech used in Behaviour-Driven Development
+. _fbmining_ - Not a Maven module - post-processing of findbugs (now spotbugs) results
 . _jpf_ - not yet updated, contains Java PathFinder examples
 . _junit4_ contains JUnit 4 examples
 . _junit5_ contains JUnit 5 examples

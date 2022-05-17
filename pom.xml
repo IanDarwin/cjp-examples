@@ -59,6 +59,7 @@
 		<module>arquillian</module>
 		<module>coverage</module>
 		<module>cucumber</module>
+		<!-- <module>fbmining</module> -->
 		<!-- <module>jpf</module> -->
 		<module>junit4</module>
 		<module>junit5</module>
