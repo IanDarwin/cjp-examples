@@ -8,6 +8,6 @@ public class PageUnitDemoTest {
 
 	@Test
 	public void testORMsearch() throws Exception {
-		new ScriptTestCase("src/test/pageunit/oreilly.txt").run();
+		new ScriptTestCase("src/test/pageunit/sample.txt").run();
 	}
 }

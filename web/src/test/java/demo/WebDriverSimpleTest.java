@@ -59,7 +59,7 @@ public class WebDriverSimpleTest {
 	public void testSearchBox() {
 
         // Let's go look at O'Reilly books
-        driver.get("http://www.oreilly.com/");
+        driver.get("http://pageunit.darwinsys.com/simpleform.html");
 
         // Find search box textfield (e.g., see line 436 in this page's View Source as of early 2016)
         WebElement element = driver.findElement(By.name("q"));
@@ -75,10 +75,10 @@ public class WebDriverSimpleTest {
 		// Now the browser (and hence the web driver) should be on the search results page
 
         // Verify the title of the page
-        assertTrue("Page title", driver.getTitle().contains("O'Reilly Search"));
+        //assertTrue("Page title", driver.getTitle().contains("DarwinSys Search"));
 
         // Verify the search results
-		assertTrue("found", driver.getPageSource().contains("Java Cookbook"));
+		assertTrue("found", driver.getPageSource().contains("we couldn't find that page"));
 		
 		if (driver instanceof TakesScreenshot) {
 			File screenshot = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);

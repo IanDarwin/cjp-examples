@@ -34,7 +34,7 @@ public class HtmlUnitDemoTest {
 		    HtmlPage page2 = searchButton.click();
 
 		    // Check for results
-	        final String pageAsText = page2.asText();
+	        final String pageAsText = page2.toString();
 	        // System.out.println(pageAsText);
 	        assertTrue(pageAsText.contains("Java Cookbook"));
 	    }
