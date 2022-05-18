@@ -38,6 +38,7 @@
         <cucumber.version>1.2.2</cucumber.version>
 		<darwinsys-api.version>1.5.14</darwinsys-api.version>
 		<groovy.version>3.0.9</groovy.version>
+		<htmlunit.version>2.37.0</htmlunit.version>
 		<javaee.version>8.0</javaee.version>
 		<junit4.version>[4.13.1,)</junit4.version>
 		<junit5.version>5.7.1</junit5.version>
@@ -46,7 +47,7 @@
 		<maven.pmd.version>3.6</maven.pmd.version>
 		<plugin.surefire.version>3.0.0-M6</plugin.surefire.version>
 		<maven.findbugs.version>3.0.1</maven.findbugs.version>
-		<webdriver.version>3.61.0</webdriver.version>
+		<webdriver.version>2.50.0</webdriver.version>
 
 		<!-- Dependency Version Dependencies -->
 		<maven.compiler.source>${javase.version}</maven.compiler.source>
