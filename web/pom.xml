@@ -26,7 +26,7 @@
 		<!-- Selenium WebDriver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>htmlunit-driver</artifactId>
+			<artifactId>selenium-java</artifactId>
 			<version>${webdriver.version}</version>
 		</dependency>
 

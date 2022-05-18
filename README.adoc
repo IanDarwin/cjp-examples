@@ -43,10 +43,12 @@ There are several main directories:
 . _web_ - some general web tests
 . _webtest-canoo_ - the Canoo web test framework
 
-Of these, the current "broken" list is:
-jpf, web, webtest.
+Of these, the current list of broken directories is:
+jpf, webtest-canoo.
 Plus, the arquillian folder has a race condition that only manifests on some platforms,
 and I've not yet tracked down if it's in my code or the framework.
+And, the web folder has two tests disabled due to dependency issues.
+Sigh.
 
 == JPF: Java PathFinder
 

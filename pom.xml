@@ -70,7 +70,7 @@
 		<!-- <module>spock</module> -->
 		<module>spotbugs</module>
 		<module>static</module>
-		<!-- <module>web</module> -->
+		<module>web</module>
 		<!-- <module>webtest-canoo</module> -->
     </modules>
 
