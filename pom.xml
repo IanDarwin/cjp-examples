@@ -46,7 +46,7 @@
 		<maven.pmd.version>3.6</maven.pmd.version>
 		<plugin.surefire.version>3.0.0-M6</plugin.surefire.version>
 		<maven.findbugs.version>3.0.1</maven.findbugs.version>
-		<webdriver.version>2.50.0</webdriver.version>
+		<webdriver.version>3.61.0</webdriver.version>
 
 		<!-- Dependency Version Dependencies -->
 		<maven.compiler.source>${javase.version}</maven.compiler.source>
