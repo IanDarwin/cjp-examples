@@ -37,6 +37,7 @@
 		<javase.version>11</javase.version>
         <cucumber.version>1.2.2</cucumber.version>
 		<darwinsys-api.version>1.5.14</darwinsys-api.version>
+		<groovy.version>3.0.9</groovy.version>
 		<javaee.version>8.0</javaee.version>
 		<junit4.version>[4.13.1,)</junit4.version>
 		<junit5.version>5.7.1</junit5.version>
@@ -59,7 +60,7 @@
 		<module>arquillian</module>
 		<module>coverage</module>
 		<module>cucumber</module>
-		<!-- <module>fbmining</module> -->
+		<!-- Not really a module... fbmining</module> -->
 		<!-- <module>jpf</module> -->
 		<module>junit4</module>
 		<module>junit5</module>
