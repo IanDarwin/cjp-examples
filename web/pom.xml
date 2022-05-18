@@ -26,7 +26,7 @@
 		<!-- Selenium WebDriver -->
 		<dependency>
 			<groupId>org.seleniumhq.selenium</groupId>
-			<artifactId>selenium-java</artifactId>
+			<artifactId>htmlunit-driver</artifactId>
 			<version>${webdriver.version}</version>
 		</dependency>
 
@@ -34,7 +34,7 @@
 		<dependency>
 			<groupId>net.sourceforge.htmlunit</groupId>
 			<artifactId>htmlunit</artifactId>
-			<version>2.37.0</version>
+			<version>2.61.0</version>
 		</dependency>
 
 		<!-- PageUnit -->
