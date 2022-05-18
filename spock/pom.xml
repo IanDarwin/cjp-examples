@@ -19,20 +19,43 @@
 	<name>Checking Java Programs - Spock examples</name>
 	<description>Spock testing examples from CJP</description>
 
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.spockframework</groupId>
+				<artifactId>spock-bom</artifactId>
+				<version>2.1-groovy-3.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
   <dependencies>
-    <!-- My own Java API potpourri, either installed locally, or on Central thanks to Sonatatype.org -->
+    <!-- My own Java API potpourri. -->
     <dependency>
-      <groupId>com.darwinsys</groupId>
-        <artifactId>darwinsys-api</artifactId>
-        <version>1.7.5</version>
+		<groupId>com.darwinsys</groupId>
+		<artifactId>darwinsys-api</artifactId>
+		<version>1.7.5</version>
     </dependency>
 
 	<!-- Spock! -->
-	<dependency>
+	<!-- Mandatory dependencies for using Spock -->
+    <dependency>
 		<groupId>org.spockframework</groupId>
 		<artifactId>spock-core</artifactId>
-		<version>2.2-M1-groovy-4.0</version>
 		<scope>test</scope>
+    </dependency>
+    <dependency>
+		<groupId>org.spockframework</groupId>
+		<artifactId>spock-junit4</artifactId>
+		<scope>test</scope>
+    </dependency>
+
+	<dependency>
+		<groupId>org.codehaus.groovy</groupId>
+		<artifactId>groovy-sql</artifactId>
+		<version>${groovy.version}</version>
 	</dependency>
 
 	<!-- Geb, Spock web test -->
@@ -69,33 +92,34 @@
 
 	<build>
     <plugins>
-      <!-- Mandatory plugins for using Spock -->
-      <plugin>
-        <!-- Use gmavenplus plugin to compile Groovy code, see https://github.com/groovy/GMavenPlus/wiki -->
-        <groupId>org.codehaus.gmavenplus</groupId>
-        <artifactId>gmavenplus-plugin</artifactId>
-        <version>1.4</version>
-        <executions>
-          <execution>
-            <goals>
-              <goal>compile</goal>
-              <goal>testCompile</goal>
-            </goals>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
-        <artifactId>maven-surefire-plugin</artifactId>
-        <version>2.6</version>
-        <configuration>
-          <useFile>false</useFile>
-          <includes>
-            <include>**/*Spec.java</include>
-            <include>**/*Test.java</include>
-          </includes>
-        </configuration>
-      </plugin>
-      </plugins>
+		<!-- Mandatory plugins for using Spock -->
+		<plugin>
+		  <!-- Use gmavenplus plugin to compile Groovy code, see https://github.com/groovy/GMavenPlus/wiki -->
+		  <groupId>org.codehaus.gmavenplus</groupId>
+		  <artifactId>gmavenplus-plugin</artifactId>
+		  <version>1.12.0</version>
+		  <executions>
+		    <execution>
+				<goals>
+				  <goal>compile</goal>
+				  <goal>compileTests</goal>
+				</goals>
+		    </execution>
+		  </executions>
+		</plugin>
+		<plugin>
+		  <artifactId>maven-surefire-plugin</artifactId>
+		  <version>3.0.0-M5</version>
+		  <configuration>
+			  <useModulePath>false</useModulePath>
+			  <useFile>false</useFile>
+			  <includes>
+				<include>**/*Test</include>
+				<include>**/*Spec</include>
+		    </includes>
+		  </configuration>
+		</plugin>
+		</plugins>
 	</build>
   
 </project>
