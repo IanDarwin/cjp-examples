@@ -1,5 +1,5 @@
 H pageunit.darwinsys.com
-P /
+P /simpleform.html
 F searchform
 R q=anything+goes
 S
