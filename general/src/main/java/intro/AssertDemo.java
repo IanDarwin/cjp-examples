@@ -1,26 +1,21 @@
 package intro;
 
+/**
+ * Demonstrate the Java 1.4 "assert" facility.
+ * <p>
+ * Java assertions are not enabled by default;
+ * you must run with "java -enableassertions|-ea ...".
+ * @since 1.4
+ */
+// tag::main[]
 public class AssertDemo {
-
-	public static double myFunction(double d, double e) {
-		System.out.printf("AssertDemo.myFunction(%f, %f)%n", d, e);
-
-		// pre-assertion:
-		assert d < e : "first argument must be less than second";
-
-		double result = 0;	// some computation involving d and
-
-		// post-assertion
-		assert d >= 0 : "result became negative";
-
-		return result;
-	}
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
-		myFunction(Math.PI, 123.456);	// OK
-		myFunction(Math.PI, Math.PI);	// violates pre-assertion
+		int i = 4;
+		if (args.length == 1) {
+			i = Integer.parseInt(args[0]);
+		}
+		assert i > 0 : "i is non-positive";
+		System.out.println("Hello after an assertion");
 	}
-
 }
+// end::main[]

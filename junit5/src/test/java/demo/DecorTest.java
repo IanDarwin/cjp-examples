@@ -42,7 +42,8 @@ public class DecorTest {
 	@Test
 	public void testNonDefaultClassic() {
 		assertEquals("// Hello world //",
-			new Decorator("//", "==").decorate("Hello world"));
+			new Decorator("//", "==").decorate("Hello world"),
+				"Non-default pattern failed");
 	}
 
 	/** Test expected exception-throwing */
