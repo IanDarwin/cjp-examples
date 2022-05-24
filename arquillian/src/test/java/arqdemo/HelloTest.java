@@ -6,11 +6,13 @@ import org.jboss.arquillian.junit.Arquillian;
 import org.jboss.shrinkwrap.api.ShrinkWrap;
 import org.jboss.shrinkwrap.api.asset.EmptyAsset;
 import org.jboss.shrinkwrap.api.spec.JavaArchive;
+import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.Assert;
 import org.junit.runner.RunWith;
 import static org.junit.Assert.*;
 
+@Ignore
 @RunWith(Arquillian.class)
 public class HelloTest {
 
