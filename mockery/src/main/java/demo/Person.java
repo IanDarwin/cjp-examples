@@ -1,21 +1,59 @@
 package demo;
 
+// tag::main[]
 public class Person {
 
-	long id;
+	int id;
+	protected String firstName;
+	protected String lastName;
+	
+	public Person() {
+		// Must code it since we need 2-arg form.
+	}
+	
+	public Person(String firstName, String lastName) {
+		this.firstName = firstName;
+		this.lastName = lastName;
+	}
 
-	/*package*/ String firstName, lastName;
+	public int getId() {
+		return id;
+	}
 
-	public Person(long id, String f, String l) {
+	public void setId(int id) {
 		this.id = id;
-		this.firstName = f;
-		this.lastName = l;
 	}
-	public Person(String f, String l) {
-		this(0, f, l);
+	
+	public String getFirstName() {
+		return firstName;
 	}
 
-	public String name() {
-		return firstName + " " + lastName;
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+	public String getLastName() {
+		return lastName;
+	}
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+	@Override
+	public String toString() {
+		return getFullName();
+	}
+	
+	public String getFullName() {
+		StringBuilder sb = new StringBuilder();
+		if (firstName != null)
+			sb.append(firstName).append(' ');
+		if (lastName != null)
+			sb.append(lastName);
+		if (sb.length() == 0)
+			sb.append("NO NAME");
+		return sb.toString();
 	}
 }
+// end::main[]
