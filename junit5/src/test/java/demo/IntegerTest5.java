@@ -1,4 +1,4 @@
-package junit5;
+package demo;
 
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
@@ -12,6 +12,9 @@ import static org.junit.jupiter.api.Assertions.*;
  */
 public class IntegerTest5 {
 
+	// These two optional setup methods are just to show
+	// when they get invoked by the framework.
+	
 	@BeforeAll
 	public static void setupClass() {
 		System.out.println("IntegerTest: In demo Class setup method");
@@ -24,16 +27,17 @@ public class IntegerTest5 {
 	
 	@Test
 	public void testAdd() {
-		assertEquals(4, 2 + 2, "You can't add!");
+		assertEquals(4, 2 + 2, "Java can't add!");
+	}
+	@Test
+	public void testDecode() {
+		int ret = Integer.decode("-42").intValue();
+		assertEquals(-42, ret);
 	}
 
 	@Test
-	public void testDecode() throws Exception {
-		int ret;
-		ret = Integer.decode("-42").intValue();
-		assertEquals(-42, ret);
-		ret = Integer.decode("-0x42").intValue();
-		assertEquals(-66, ret);
-		assertThrows(NumberFormatException.class, () -> Integer.decode("one two three"));
+	public void testDecodeThrows() {
+		assertThrows(NumberFormatException.class,
+		    () -> Integer.decode("one two three"));
 	}
 }

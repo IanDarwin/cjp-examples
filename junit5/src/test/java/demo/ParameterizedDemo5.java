@@ -1,4 +1,4 @@
-package junit5;
+package demo;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
@@ -12,7 +12,7 @@ public class ParameterizedDemo5 {
 		"one, 1",
 		"two, 2",
 		"three, 3",
-		"six, 6",
+		// "six, 6", // un-comment to show failure
 	})
 	void testScoreNumbers(String word, int score) {
 		assertEquals(score, Converter.convert(word));
