@@ -7,10 +7,11 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /** 
- * Demonstrate how you might use JUnit 5.x to test the java.lang.Integer 
- * class (this is not to say that Sun/Oracle doesn't test before they ship it - they do!!).
+ * Demonstrate how you might use JUnit 5.x to test a class that USES the java.lang.Integer class
  */
-public class IntegerTest5 {
+public class AdderTest {
+
+	MyAdder target;
 
 	// These two optional setup methods are just to show
 	// when they get invoked by the framework.
@@ -27,18 +28,13 @@ public class IntegerTest5 {
 	
 	@Test
 	public void testAdd() {
-		assertEquals(4, 2 + 2, "Java can't add!");
+		assertEquals(4, target.add(2, 2), "Adder can't add!");
 	}
 
-	@Test
-	public void testDecode() {
-		int ret = Integer.decode("-42").intValue();
-		assertEquals(-42, ret);
-	}
-
-	@Test
-	public void testDecodeThrows() {
-		assertThrows(NumberFormatException.class,
-		    () -> Integer.decode("one two three"));
+	// Trivial, just enough to throw tests at
+	class MyAdder {
+		int add(int i1, int i2) {
+			return i1 + i2;
+		}
 	}
 }
