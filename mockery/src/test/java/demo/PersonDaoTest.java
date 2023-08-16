@@ -8,7 +8,7 @@ import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
-import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -21,18 +21,19 @@ public class PersonDaoTest {
 	@Before
 	public void setup() {
 		mockPersonDao = mock(PersonDao.class);
-		testSubject= new PersonController(mockPersonDao);
+		testSubject = new PersonController(mockPersonDao);
 	}
 
-	Person p1 = new Person(0, "First", "Person");
-	Person p2 = new Person(1, "Robin", "Williams");
-	Person[] people = {p1, p2};
+	List<Person> people = List.of(
+		new Person("First", "Person"),
+		new Person("Robin", "Williams")
+	);
 
 	@Test
 	public void testControllerCallsDaoGetAll() {
 		// Condition the Mock
-		when(mockPersonDao.getAll()).thenReturn(Arrays.asList(people));
-		
+		when(mockPersonDao.getAll()).thenReturn(people);
+
 		// Now the actual test - we know there's no such person in our fake data.
 		boolean b = testSubject.checkIfPersonExists("Ashlie", "Madison");
 
@@ -46,10 +47,10 @@ public class PersonDaoTest {
 	
 	@Test
 	public void testControllerCallsDaoGetById() {
-		when(mockPersonDao.getById(1)).thenReturn(new Person(1, "Ashlie", "Madison"));
+		when(mockPersonDao.getById(1)).thenReturn(new Person("Ashlie", "Madison"));
 		Person p = testSubject.findPersonById(1);
 		verify(mockPersonDao, times(1)).getById(1);
-		assertThat(p.name(), equalTo("Ashlie Madison"));
+		assertThat(p.getFullName(), equalTo("Ashlie Madison"));
 	}
 
 }

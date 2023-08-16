@@ -9,7 +9,7 @@ import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 import static org.mockito.MockitoAnnotations.initMocks;
 
-import java.util.Arrays;
+import java.util.List;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -30,8 +30,8 @@ public class PersonDaoTest2 {
 	}
 
 	List<Person> people = List.of(
-		new Person(0, "First", "Person"),
-		new Person(1, "Robin", "Williams"),
+		new Person("Some", "Person"),
+		new Person("Robin", "Williams")
 	);
 
 	@Test
@@ -52,10 +52,10 @@ public class PersonDaoTest2 {
 
 	@Test
 	public void testControllerCallsDaoGetById() {
-		when(mockPersonDao.getById(1)).thenReturn(new Person(1, "Ashlie", "Madison"));
+		when(mockPersonDao.getById(1)).thenReturn(new Person("Ashlie", "Madison"));
 		Person p = testSubject.findPersonById(1);
 		verify(mockPersonDao, times(1)).getById(1);
-		assertThat(p.name(), equalTo("Ashlie Madison"));
+		assertThat(p.getFullName(), equalTo("Ashlie Madison"));
 	}
 
 }

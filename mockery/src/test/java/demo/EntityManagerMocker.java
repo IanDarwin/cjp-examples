@@ -26,7 +26,7 @@ public class EntityManagerMocker {
 	public void testHandlerCallsDao() {
 		// Condition the Mock
 		EntityManager em = emf.createEntityManager();
-		when(em.find(Person.class, 1L)).thenReturn(new Person(1, "Ashlie", "Madison"));
+		when(em.find(Person.class, 1L)).thenReturn(new Person("Ashlie", "Madison"));
 
 		// Now the actual test
 		// Simulate some real EntityManager-using DAO code
@@ -35,6 +35,6 @@ public class EntityManagerMocker {
 		// Test the expectations
 		verify(emf, times(1)).createEntityManager();
 		verify(em, times(1)).find(Person.class, 1L);
-		assertEquals("Ashlie Madison", p.name());
+		assertEquals("Ashlie Madison", p.getFullName());
 	}
 }
