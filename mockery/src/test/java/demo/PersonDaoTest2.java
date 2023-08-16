@@ -29,14 +29,15 @@ public class PersonDaoTest2 {
 		testSubject= new PersonController(mockPersonDao);
 	}
 
-	Person p1 = new Person(0, "First", "Person");
-	Person p2 = new Person(1, "Robin", "Williams");
-	Person[] people = {p1, p2};
+	List<Person> people = List.of(
+		new Person(0, "First", "Person"),
+		new Person(1, "Robin", "Williams"),
+	);
 
 	@Test
 	public void testControllerCallsDaoGetAll() {
 		// Condition the Mock
-		when(mockPersonDao.getAll()).thenReturn(Arrays.asList(people));
+		when(mockPersonDao.getAll()).thenReturn(people);
 		
 		// Now the actual test - we know there's no such person in our fake data.
 		boolean b = testSubject.checkIfPersonExists("Ashlie", "Madison");
@@ -48,7 +49,7 @@ public class PersonDaoTest2 {
 		// Test the final result
 		assertFalse(b);
 	}
-	
+
 	@Test
 	public void testControllerCallsDaoGetById() {
 		when(mockPersonDao.getById(1)).thenReturn(new Person(1, "Ashlie", "Madison"));
