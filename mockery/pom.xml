@@ -30,7 +30,7 @@
 			<scope>test</scope>
 		</dependency>
 
-		<!-- JUnit 4.x is in parent pom -->
+		<!-- JUnit 4 and 5 are in parent pom -->
 
 		<dependency>
 			<groupId>org.hamcrest</groupId>
@@ -45,17 +45,18 @@
 			<version>2.0.2-beta</version>
 			<scope>test</scope>
 		</dependency>
-        <dependency>
-            <groupId>org.powermock</groupId>
-            <artifactId>powermock-api-mockito</artifactId>
-            <version>1.7.4</version>
-            <scope>test</scope>
-        </dependency>
-        
-        <dependency>
-		    <groupId>org.hibernate.java-persistence</groupId>
-		    <artifactId>jpa-api</artifactId>
-		    <version>2.0.Beta-20090815</version>
+		<dependency>
+			<groupId>org.powermock</groupId>
+			<artifactId>powermock-api-mockito</artifactId>
+			<version>1.7.4</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- Used in EntityManager mocking demo -->
+		<dependency>
+			<groupId>org.hibernate.java-persistence</groupId>
+			<artifactId>jpa-api</artifactId>
+			<version>2.0.Beta-20090815</version>
 		</dependency>
 
 	</dependencies>
