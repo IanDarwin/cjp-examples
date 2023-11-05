@@ -109,13 +109,6 @@
 
 	<!-- JUnit defined here so all get access to it. -->
 	<dependencies>
-		<!-- JUnit 4 -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>${junit4.version}</version>
-			<scope>test</scope>
-		</dependency>
 		<!-- JUnit 5 -->
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
@@ -126,6 +119,13 @@
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>
 			<artifactId>junit-jupiter-engine</artifactId>
+			<version>${junit5.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<!-- Backwards compat: IF you have a mix of JUnit 4 and 5 tests, you should add this: -->
+		<dependency>
+			<groupId>org.junit.vintage</groupId>
+			<artifactId>junit-vintage-engine</artifactId>
 			<version>${junit5.version}</version>
 			<scope>test</scope>
 		</dependency>
