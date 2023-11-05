@@ -11,8 +11,8 @@ import static org.mockito.MockitoAnnotations.initMocks;
 
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
 
 /**
@@ -23,7 +23,7 @@ public class PersonDaoTest2 {
 	@Mock private PersonDao mockPersonDao;
 	private PersonController testSubject;
 
-	@Before
+	@BeforeEach
 	public void setup() {
 		initMocks(this);
 		testSubject= new PersonController(mockPersonDao);
