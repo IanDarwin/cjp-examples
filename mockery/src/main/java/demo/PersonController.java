@@ -17,8 +17,8 @@ public class PersonController {
 	 */
 	public boolean checkIfPersonExists(String firstName, String lastName) {
 		for (Person candidate : dao.getAll()) {
-			if (firstName.equals(candidate.firstName) &&
-				lastName.equals(candidate.lastName)) {
+			if (firstName.equals(candidate.firstName()) &&
+				lastName.equals(candidate.lastName())) {
 					return true;
 				}
 		}
