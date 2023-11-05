@@ -7,25 +7,30 @@ import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
+import static org.mockito.MockitoAnnotations.initMocks;
 
 import java.util.List;
 
-import org.junit.Before;
-import org.junit.Test;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import org.mockito.Mock;
 
-public class PersonDaoTest {
+/**
+ * Same as PersonDaoTest but using @Mocks
+ */
+public class MockitoViaAnnotsTest {
 
-	private PersonDao mockPersonDao;
+	@Mock private PersonDao mockPersonDao;
 	private PersonController testSubject;
 
-	@Before
+	@BeforeEach
 	public void setup() {
-		mockPersonDao = mock(PersonDao.class);
-		testSubject = new PersonController(mockPersonDao);
+		initMocks(this);
+		testSubject= new PersonController(mockPersonDao);
 	}
 
 	List<Person> people = List.of(
-		new Person("First", "Person"),
+		new Person("Some", "Person"),
 		new Person("Robin", "Williams")
 	);
 
@@ -33,7 +38,7 @@ public class PersonDaoTest {
 	public void testControllerCallsDaoGetAll() {
 		// Condition the Mock
 		when(mockPersonDao.getAll()).thenReturn(people);
-
+		
 		// Now the actual test - we know there's no such person in our fake data.
 		boolean b = testSubject.checkIfPersonExists("Ashlie", "Madison");
 
@@ -44,7 +49,7 @@ public class PersonDaoTest {
 		// Test the final result
 		assertFalse(b);
 	}
-	
+
 	@Test
 	public void testControllerCallsDaoGetById() {
 		when(mockPersonDao.getById(1)).thenReturn(new Person("Ashlie", "Madison"));
