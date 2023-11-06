@@ -18,7 +18,7 @@ import org.mockito.Mock;
 /**
  * Same as PersonDaoTest but using @Mocks
  */
-public class MockitoViaAnnotsTest {
+public class MockitoViaAnnotationsTest {
 
 	@Mock private PersonDao mockPersonDao;
 	private PersonController testSubject;
