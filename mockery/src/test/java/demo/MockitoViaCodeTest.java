@@ -13,7 +13,7 @@ import java.util.List;
 import org.junit.Before;
 import org.junit.Test;
 
-public class MockitoInCodeTest {
+public class MockitoViaCodeTest {
 
 	private PersonDao mockPersonDao;
 	private PersonController testSubject;
